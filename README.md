@@ -26,6 +26,7 @@ This is **not a redesign** — it is a **complete reimagination of a college web
 * 🎬 Immersive UI/UX
 * 📊 Data-driven insights
 * ⚡ High-performance frontend architecture
+* 📲 Interactive UI on Mobile and Web 
 
 ---
 

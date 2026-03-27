@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform, useInView } from 'framer-motion';
 import { PageTransition } from '../components/PageTransition';
-import { 
-  Globe, Users, Building2, Rocket, MapPin, Briefcase, 
-  GraduationCap, ArrowRight, X, ChevronRight, 
+import {
+  Globe, Users, Building2, Rocket, MapPin, Briefcase,
+  GraduationCap, ArrowRight, X, ChevronRight,
   Quote, Network, Calendar, Award, LineChart, Code, Brain, Lightbulb, TrendingUp,
   CheckCircle2
 } from 'lucide-react';
@@ -18,6 +18,11 @@ const STATS = [
 
 const MAP_NODES = [
   { top: '55%', left: '72%', label: "Bangalore", count: "20,000+", isHub: true },
+  { top: '48%', left: '71%', label: "Delhi", count: "5,000+", isHub: true },
+  { top: '53%', left: '69%', label: "Mumbai", count: "4,500+", isHub: true },
+  { top: '54%', left: '71%', label: "Hyderabad", count: "3,000+" },
+  { top: '56%', left: '72.5%', label: "Chennai", count: "2,800+" },
+  { top: '54.5%', left: '69.5%', label: "Pune", count: "2,500+" },
   { top: '30%', left: '20%', label: "Silicon Valley", count: "5,000+" },
   { top: '28%', left: '22%', label: "Seattle", count: "2,000+" },
   { top: '35%', left: '26%', label: "New York", count: "2,500+" },
@@ -34,7 +39,7 @@ const MAP_NODES = [
 const FEATURED_ALUMNI = [
   {
     id: 1, name: "Rahul Sharma", role: "VP Engineering", company: "Google", tag: "Tech Leader",
-    img: "https://picsum.photos/seed/rahul/600/600",
+    img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=600&h=600",
     story: "From coding in the BMSCE labs to leading a global engineering team at Google, Rahul's journey is a testament to the strong foundation built during his college years.",
     journey: [
       { year: "2010", text: "Graduated from BMSCE (CSE)" },
@@ -46,7 +51,7 @@ const FEATURED_ALUMNI = [
   },
   {
     id: 2, name: "Priya Patel", role: "Founder & CEO", company: "TechNova", tag: "Founder",
-    img: "https://picsum.photos/seed/priya/600/600",
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600&h=600",
     story: "Priya turned her final year project into a multi-million dollar startup. She credits the incubation center and her professors for the initial push.",
     journey: [
       { year: "2015", text: "Graduated from BMSCE (ISE)" },
@@ -58,7 +63,7 @@ const FEATURED_ALUMNI = [
   },
   {
     id: 3, name: "Arjun Reddy", role: "Principal Data Scientist", company: "Amazon", tag: "AI Specialist",
-    img: "https://picsum.photos/seed/arjun/600/600",
+    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600&h=600",
     story: "Arjun's passion for AI started in the BMSCE robotics club. Today, he builds algorithms that power recommendations for millions of users.",
     journey: [
       { year: "2014", text: "Graduated from BMSCE (ECE)" },
@@ -70,7 +75,7 @@ const FEATURED_ALUMNI = [
   },
   {
     id: 4, name: "Sneha Rao", role: "Partner", company: "McKinsey", tag: "Consultant",
-    img: "https://picsum.photos/seed/sneha/600/600",
+    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600&h=600",
     story: "Transitioning from core engineering to management consulting, Sneha uses her analytical skills to solve complex business problems globally.",
     journey: [
       { year: "2008", text: "Graduated from BMSCE (Mech)" },
@@ -82,7 +87,7 @@ const FEATURED_ALUMNI = [
   },
   {
     id: 5, name: "Vikram Singh", role: "Founder & CEO", company: "AeroSpace Dynamics", tag: "Startup Founder",
-    img: "https://picsum.photos/seed/vikram/600/600",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600&h=600",
     story: "Built a space-tech startup that recently launched its first micro-satellite, revolutionizing low-earth orbit communications.",
     journey: [
       { year: "2016", text: "Graduated from BMSCE (Aero)" },
@@ -94,7 +99,7 @@ const FEATURED_ALUMNI = [
   },
   {
     id: 6, name: "Dr. Ananya Sharma", role: "Head of AI Research", company: "DeepMind", tag: "AI / Research Expert",
-    img: "https://picsum.photos/seed/ananya/600/600",
+    img: "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?auto=format&fit=crop&q=80&w=600&h=600",
     story: "Leading breakthrough research in AGI and reinforcement learning, pushing the boundaries of what machines can learn.",
     journey: [
       { year: "2012", text: "Graduated from BMSCE (CSE)" },
@@ -207,7 +212,7 @@ export function Alumni() {
   return (
     <PageTransition>
       <div className="bg-[#050505] min-h-screen text-white overflow-hidden selection:bg-blue-500/30 font-sans">
-        
+
         {/* 1. HERO */}
         <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -240,7 +245,7 @@ export function Alumni() {
                 </span>
               </h1>
             </motion.div>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -273,19 +278,19 @@ export function Alumni() {
               <p className="text-gray-400 text-lg">BMSCE alumni are everywhere in the tech world.</p>
             </div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="relative h-[400px] md:h-[600px] rounded-[2.5rem] bg-[#0A0A0A] border border-white/10 overflow-hidden flex items-center justify-center group"
             >
               <div className="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')] bg-no-repeat bg-center bg-contain opacity-10 filter invert transition-opacity duration-700 group-hover:opacity-20" />
-              
+
               {MAP_NODES.map((node, i) => (
                 <div key={i} className="absolute group/node cursor-pointer z-20" style={{ top: node.top, left: node.left }}>
                   <div className={`absolute -inset-3 rounded-full animate-ping ${node.isHub ? 'bg-purple-500/40' : 'bg-blue-500/20'}`} />
                   <div className={`relative w-3 h-3 rounded-full shadow-[0_0_15px_rgba(59,130,246,0.8)] ${node.isHub ? 'bg-purple-500 w-4 h-4 -ml-0.5 -mt-0.5' : 'bg-blue-500'}`} />
-                  
+
                   <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 opacity-0 group-hover/node:opacity-100 transition-opacity pointer-events-none z-30">
                     <div className="bg-white/10 backdrop-blur-xl border border-white/20 text-white text-xs py-2 px-4 rounded-lg whitespace-nowrap shadow-2xl">
                       <div className="font-bold text-blue-400 text-sm">{node.label}</div>
@@ -303,13 +308,13 @@ export function Alumni() {
                   </linearGradient>
                 </defs>
                 {MAP_NODES.filter(n => !n.isHub).map((node, i) => (
-                  <motion.path 
+                  <motion.path
                     key={i}
-                    d={`M 72% 55% Q 50% 40% ${node.left} ${node.top}`} 
-                    fill="none" 
-                    stroke="url(#lineGrad)" 
-                    strokeWidth="1.5" 
-                    strokeDasharray="4 4" 
+                    d={`M 72% 55% Q 50% 40% ${node.left} ${node.top}`}
+                    fill="none"
+                    stroke="url(#lineGrad)"
+                    strokeWidth="1.5"
+                    strokeDasharray="4 4"
                     className="animate-[dash_20s_linear_infinite]"
                     initial={{ pathLength: 0, opacity: 0 }}
                     whileInView={{ pathLength: 1, opacity: 1 }}
@@ -369,7 +374,7 @@ export function Alumni() {
               <h2 className="text-4xl md:text-6xl font-black mb-6">The Growth Trajectory</h2>
               <p className="text-xl text-gray-400">How our alumni evolve over time.</p>
             </div>
-            
+
             <div className="relative">
               <div className="absolute top-1/2 left-0 right-0 h-1 bg-white/10 -translate-y-1/2 hidden md:block" />
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
@@ -448,7 +453,7 @@ export function Alumni() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-black mb-6">Mentorship Network</h2>
             <p className="text-xl text-gray-400 mb-16 max-w-2xl mx-auto">Alumni actively help current students navigate their careers.</p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {MENTORSHIP.map((item, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
@@ -473,11 +478,11 @@ export function Alumni() {
               <h2 className="text-4xl font-black mb-4">Alumni by Industry</h2>
               <p className="text-gray-400">Deep dive into where our graduates excel.</p>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {INDUSTRIES.map((ind, i) => (
-                <button 
-                  key={i} 
+                <button
+                  key={i}
                   onClick={() => setActiveIndustryTab(i)}
                   className={`px-6 py-3 rounded-full font-bold text-sm transition-all ${activeIndustryTab === i ? 'bg-blue-500 text-white shadow-[0_0_15px_rgba(59,130,246,0.5)]' : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white'}`}
                 >
@@ -546,7 +551,7 @@ export function Alumni() {
                     <span className="text-gray-400">{metric.value}%</span>
                   </div>
                   <div className="h-4 w-full bg-white/5 rounded-full overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${metric.value}%` }}
                       viewport={{ once: true }}
@@ -570,7 +575,7 @@ export function Alumni() {
                 Opens Doors Worldwide.
               </span>
             </motion.h2>
-            
+
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
               <button className="w-full sm:w-auto px-10 py-5 bg-white text-black rounded-full font-black text-lg hover:scale-105 transition-transform shadow-[0_0_30px_rgba(255,255,255,0.3)]">
                 Apply Now

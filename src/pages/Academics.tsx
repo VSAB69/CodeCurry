@@ -1,20 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PageTransition } from '../components/PageTransition';
-import { 
-  Search, 
-  Cpu, 
-  Database, 
-  Globe, 
-  Shield, 
-  Zap, 
-  Settings, 
-  Building2, 
-  Microscope, 
-  Activity, 
-  Briefcase, 
-  GraduationCap, 
-  ArrowRight, 
+import {
+  Search,
+  Cpu,
+  Database,
+  Globe,
+  Shield,
+  Zap,
+  Settings,
+  Building2,
+  Microscope,
+  Activity,
+  Briefcase,
+  GraduationCap,
+  ArrowRight,
   X,
   BookOpen,
   Users,
@@ -103,7 +103,7 @@ export function Academics() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const navigate = useNavigate();
-  
+
   const labsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -131,10 +131,10 @@ export function Academics() {
 
   const filteredDepartments = DEPARTMENTS.filter(dept => {
     const matchesLevel = dept.level === activeLevel;
-    const matchesSearch = dept.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          dept.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = dept.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      dept.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = activeCategory === 'All' || dept.category === activeCategory;
-    
+
     return matchesLevel && matchesSearch && matchesCategory;
   });
 
@@ -149,12 +149,12 @@ export function Academics() {
           {/* Animated Particles/Glow Background */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" />
           <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[100px] mix-blend-screen animate-pulse" style={{ animationDelay: '2s' }} />
-          
+
           {/* Grid Pattern */}
           <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-20" />
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] z-20 [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)]" />
         </div>
-        
+
         <div className="relative z-30 max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -164,7 +164,7 @@ export function Academics() {
           >
             <span className="text-gray-300 font-medium tracking-wider text-sm uppercase">Academic Ecosystem</span>
           </motion.div>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -175,7 +175,7 @@ export function Academics() {
               Build the Future.
             </span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -196,9 +196,8 @@ export function Academics() {
                 setActiveLevel(level);
                 setActiveCategory('All');
               }}
-              className={`relative px-6 md:px-10 py-3 rounded-full text-sm md:text-base font-bold transition-colors ${
-                activeLevel === level ? 'text-white' : 'text-gray-500 hover:text-gray-300'
-              }`}
+              className={`relative px-6 md:px-10 py-3 rounded-full text-sm md:text-base font-bold transition-colors ${activeLevel === level ? 'text-white' : 'text-gray-500 hover:text-gray-300'
+                }`}
             >
               {activeLevel === level && (
                 <motion.div
@@ -218,12 +217,12 @@ export function Academics() {
       {/* 3 & 4. SEARCH, FILTER & DEPARTMENTS GRID */}
       <section className="py-20 bg-[#0A0A0A] min-h-screen">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          
+
           {/* Search & Filters */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-16">
             <div className="relative w-full md:w-96">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-              <input 
+              <input
                 type="text"
                 placeholder="Search departments, keywords..."
                 value={searchQuery}
@@ -231,17 +230,16 @@ export function Academics() {
                 className="w-full bg-white/5 border border-white/10 rounded-full py-3 pl-12 pr-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
               />
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-2">
               {categories.map(cat => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    activeCategory === cat 
-                      ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' 
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeCategory === cat
+                      ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
                       : 'bg-white/5 text-gray-400 border border-transparent hover:bg-white/10'
-                  }`}
+                    }`}
                 >
                   {cat}
                 </button>
@@ -267,7 +265,7 @@ export function Academics() {
                 >
                   {/* Hover Gradient Background */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${dept.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                  
+
                   {/* Glow Border Effect */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                     <div className={`absolute inset-[-1px] rounded-3xl bg-gradient-to-br ${dept.color} [mask-image:linear-gradient(white,white)] [mask-composite:exclude] p-[1px]`} style={{ WebkitMaskComposite: 'xor' }} />
@@ -282,14 +280,14 @@ export function Academics() {
                         {dept.category}
                       </span>
                     </div>
-                    
+
                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all">
                       {dept.name}
                     </h3>
                     <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
                       {dept.description}
                     </p>
-                    
+
                     <div className="flex items-center text-sm font-bold text-white/50 group-hover:text-white transition-colors mt-auto">
                       Explore Program <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -305,30 +303,6 @@ export function Academics() {
           </motion.div>
         </div>
       </section>
-
-      {/* 5. LABS & RESEARCH SECTION (GSAP HORIZONTAL SCROLL) */}
-      <section className="labs-section bg-black py-20 overflow-hidden" ref={labsRef}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-white">Innovation Labs</h2>
-          <p className="text-gray-400 mt-4 text-lg">Where theory meets cutting-edge practice.</p>
-        </div>
-        
-        <div className="pl-6 lg:pl-8">
-          <div className="labs-container flex gap-8 w-max pb-10">
-            {LABS.map((lab, i) => (
-              <div key={i} className="w-[85vw] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] relative rounded-3xl overflow-hidden group shrink-0">
-                <img src={lab.img} alt={lab.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 p-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{lab.name}</h3>
-                  <p className="text-gray-300">{lab.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 9. GLOBAL RELEVANCE SECTION */}
       <section className="py-32 bg-[#0A0A0A] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay z-0" />
@@ -337,7 +311,7 @@ export function Academics() {
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-16">
             Our curriculum is continuously updated in collaboration with industry leaders to ensure global relevance and impact.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: "Industry Collaboration", desc: "Partnerships with Fortune 500 tech companies for curriculum design and internships.", icon: Building2 },
@@ -360,16 +334,16 @@ export function Academics() {
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] to-blue-900/20 z-0" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-7xl font-black text-white mb-8">Find Your Path. <br/> Build Your Future.</h2>
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-8">Find Your Path. <br /> Build Your Future.</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-6 mt-12">
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-5 bg-white text-black font-bold rounded-full text-lg flex items-center justify-center gap-3 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all"
             >
               Apply Now <ArrowRight className="w-5 h-5" />
             </motion.button>
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-5 bg-white/10 text-white font-bold rounded-full text-lg border border-white/20 flex items-center justify-center gap-3 hover:bg-white/20 transition-all"
