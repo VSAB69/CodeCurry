@@ -14,6 +14,7 @@ import { Academics } from './pages/Academics';
 import { PlacementsPage } from './pages/PlacementsPage';
 import { CampusLife } from './pages/CampusLife';
 import { Alumni } from './pages/Alumni';
+import AIChatbot from './components/AIChatbot';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -66,6 +67,7 @@ export default function App() {
           <AnimatedRoutes />
         </main>
         <Footer />
+        <AIChatbot />
       </div>
     </Router>
   );
