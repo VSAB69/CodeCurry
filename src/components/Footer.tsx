@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
@@ -17,32 +18,25 @@ export function Footer() {
             <p className="text-gray-400 text-sm leading-relaxed">
               Shaping India's brightest minds since 1946. A legacy of excellence in engineering education, located in the heart of Bangalore.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-colors text-gray-400">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-400 hover:text-white transition-colors text-gray-400">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-pink-500 hover:text-white transition-colors text-gray-400">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors text-gray-400">
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-4">
-              {['About Us', 'Admissions', 'Academics', 'Placements', 'Campus Life', 'Alumni'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm flex items-center gap-2">
+              {[
+                { name: 'About Us', path: '/about' },
+                { name: 'Admissions', path: '/admissions' },
+                { name: 'Academics', path: '/academics' },
+                { name: 'Placements', path: '/placements' },
+                { name: 'Campus Life', path: '/campus-life' },
+                { name: 'Alumni', path: '/alumni' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link to={link.path} className="text-gray-400 hover:text-blue-400 transition-colors text-sm flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-blue-500/50" />
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>

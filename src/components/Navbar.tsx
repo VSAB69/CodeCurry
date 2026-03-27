@@ -30,8 +30,15 @@ export function Navbar() {
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold tracking-tighter text-white z-10 relative group">
-          BMS<span className="text-blue-500 transition-colors group-hover:text-purple-500">CE</span>
+        <Link to="/" className="flex items-center gap-3 z-10 relative group">
+          <img 
+            src="https://bmsce.acm.org/img/BMSCE-BLUE.png" 
+            alt="BMSCE Logo" 
+            className="h-10 w-auto object-contain"
+          />
+          <span className="text-2xl font-bold tracking-tighter text-white">
+            BMS<span className="text-blue-500 transition-colors group-hover:text-purple-500">CE</span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1 bg-white/5 border border-white/10 rounded-full px-2 py-1 backdrop-blur-md">

@@ -20,6 +20,14 @@ import AIChatbot from './components/AIChatbot';
 function AnimatedRoutes() {
   const location = useLocation();
 
+  useEffect(() => {
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location}>
@@ -48,6 +56,8 @@ export default function App() {
       touchMultiplier: 2,
     });
 
+    (window as any).lenis = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -57,6 +67,7 @@ export default function App() {
 
     return () => {
       lenis.destroy();
+      delete (window as any).lenis;
     };
   }, []);
 

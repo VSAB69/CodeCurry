@@ -3,11 +3,11 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { DEPARTMENTS, Department } from './Academics';
 import { PageTransition } from '../components/PageTransition';
-import { 
+import {
   ArrowLeft,
-  BookOpen, 
-  Users, 
-  Clock, 
+  BookOpen,
+  Users,
+  Clock,
   Award,
   FlaskConical,
   Microscope,
@@ -21,6 +21,45 @@ interface FacultyProfile {
   experience: string;
   specialization: string;
 }
+const getCurriculum = (deptId: string): string[] => {
+  const map: Record<string, string[]> = {
+    cse: ['Year 1: Programming & Math', 'Year 2: Data Structures & Algorithms', 'Year 3: OS, Networks & Databases', 'Year 4: AI, Cloud & Capstone'],
+    ise: ['Year 1: Programming Foundations', 'Year 2: File Structures & Logic Design', 'Year 3: Web Tech & Software Engg', 'Year 4: Big Data & Project'],
+    ece: ['Year 1: Basic Electronics', 'Year 2: Analog & Digital Circuits', 'Year 3: VLSI & Microcontrollers', 'Year 4: Communication Systems & Project'],
+    eee: ['Year 1: Electrical Fundamentals', 'Year 2: Network Theory & Machines', 'Year 3: Power Electronics & Signals', 'Year 4: Smart Grids & Capstone'],
+    me: ['Year 1: Engineering Mechanics', 'Year 2: Thermodynamics & Fluid Dynamics', 'Year 3: Machine Design & Manufacturing', 'Year 4: Robotics & Capstone'],
+    ce: ['Year 1: Mechanics & Materials', 'Year 2: Surveying & Fluid Dynamics', 'Year 3: Structural Analysis & Design', 'Year 4: Construction Management'],
+    ete: ['Year 1: Circuit Foundations', 'Year 2: Signals & Systems', 'Year 3: Digital Communication & DSP', 'Year 4: Wireless Networks & Capstone'],
+    iem: ['Year 1: Manufacturing Processes', 'Year 2: Operations Research', 'Year 3: Quality Management & Supply', 'Year 4: Industrial Ergonomics'],
+
+    aids: ['Year 1: Python & Statistics', 'Year 2: Machine Learning & Data Structures', 'Year 3: Deep Learning & Big Data', 'Year 4: AI Applications & Capstone'],
+    aiml: ['Year 1: Programming & Calculus', 'Year 2: AI Foundations & Algorithms', 'Year 3: Neural Networks & Vision', 'Year 4: NLP & Final Project'],
+    cseds: ['Year 1: Intro to Computing', 'Year 2: Database Systems & Stats', 'Year 3: Predictive Analytics', 'Year 4: Data Engineering & Capstone'],
+    cseiot: ['Year 1: Basic Electronics & C', 'Year 2: Microcontrollers & Networks', 'Year 3: IoT Architecture & Security', 'Year 4: Edge Computing & Project'],
+    csbs: ['Year 1: Business Computing', 'Year 2: Financial Management', 'Year 3: Enterprise Architecture', 'Year 4: Strategy & Capstone'],
+
+    bt: ['Year 1: Basic Biology & Chemistry', 'Year 2: Microbiology & Genetics', 'Year 3: Bioprocess Engineering', 'Year 4: Bioinformatics & Research'],
+    ml: ['Year 1: Medical Physics', 'Year 2: Anatomy & Biosensors', 'Year 3: Medical Imaging', 'Year 4: Healthcare Informatics & Project'],
+    che: ['Year 1: Material Balance & Thermo', 'Year 2: Transport Phenomena', 'Year 3: Chemical Kinetics & Reactors', 'Year 4: Process Control & Design'],
+    ae: ['Year 1: Engineering Math & Physics', 'Year 2: Aerodynamics & Structures', 'Year 3: Flight Mechanics & Propulsion', 'Year 4: Spacecraft Design & Project'],
+
+    chem: ['Year 1: Inorganic Chemistry', 'Year 2: Organic Synthesis', 'Year 3: Physical & Analytical Chemistry', 'Year 4: Nanochemistry & Lab Project'],
+    math: ['Year 1: Calculus & Algebra', 'Year 2: Real & Complex Analysis', 'Year 3: Differential Equations', 'Year 4: Topology & Advanced Math'],
+    phy: ['Year 1: Mechanics & Thermal', 'Year 2: Electromagnetism & Optics', 'Year 3: Quantum Mechanics', 'Year 4: Solid State Physics & Labs'],
+
+    mca: ['Sem 1: Programming & DBs', 'Sem 2: Web Tech & Software Engg', 'Sem 3: Cloud & AI Apps', 'Sem 4: Industry Internship & Project'],
+    mba: ['Sem 1: Principles of Management', 'Sem 2: Marketing, HR & Finance', 'Sem 3: Core Specializations', 'Sem 4: Business Strategy & Placement'],
+    mtech: ['Sem 1: Advanced Subject Core', 'Sem 2: Specialized Electives', 'Sem 3: Pre-Project & Seminar', 'Sem 4: Major Thesis & Dissertation'],
+  };
+
+  if (map[deptId]) return map[deptId];
+
+  if (deptId.startsWith('phd')) {
+    return ['Year 1: Coursework & Lit Review', 'Year 2: Research Proposal Formulation', 'Year 3: Data Collection & Analysis', 'Year 4: Thesis Writing & Defense'];
+  }
+
+  return ['Year 1: Core Foundations', 'Year 2: Department Core Subjects', 'Year 3: Advanced Specializations', 'Year 4: Capstone Project & Internship'];
+};
 
 export function DepartmentPage() {
   const { id } = useParams<{ id: string }>();
@@ -32,7 +71,7 @@ export function DepartmentPage() {
   useEffect(() => {
     // Find department details
     const foundDept = DEPARTMENTS.find(d => d.id === id);
-    
+
     if (foundDept) {
       setDepartment(foundDept);
     } else {
@@ -80,10 +119,10 @@ export function DepartmentPage() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-[#0A0A0A] pt-32 pb-20">
+      <div className="min-h-screen bg-[#0A0A0A] pt-4 pb-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          
-          <button 
+
+          <button
             onClick={() => navigate('/academics')}
             className="flex items-center text-gray-400 hover:text-white transition-colors mb-8 group"
           >
@@ -92,14 +131,14 @@ export function DepartmentPage() {
           </button>
 
           {/* Header Section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             className={`p-10 md:p-16 rounded-[2rem] bg-gradient-to-br ${department.color} relative overflow-hidden mb-16 shadow-2xl`}
           >
             <div className="absolute inset-0 bg-black/40 mix-blend-overlay" />
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
-            
+
             <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-8">
               <div className="w-24 h-24 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/20 shrink-0 shadow-lg">
                 <department.icon className="w-12 h-12 text-white" />
@@ -124,12 +163,12 @@ export function DepartmentPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            
+
             {/* Main Content Area */}
             <div className="lg:col-span-2 space-y-16">
-              
+
               {/* Department Overview */}
-              <motion.section 
+              <motion.section
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
@@ -142,16 +181,16 @@ export function DepartmentPage() {
                 </div>
                 <div className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm">
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    The {department.name} department strives for excellence in education and research. 
-                    It blends rigorous theoretical knowledge with extensive practical training. Through industry-collaborative 
-                    curriculums, advanced labs, and dedicated faculty, we aim to nurture the next generation of engineers, 
+                    The {department.name} department strives for excellence in education and research.
+                    It blends rigorous theoretical knowledge with extensive practical training. Through industry-collaborative
+                    curriculums, advanced labs, and dedicated faculty, we aim to nurture the next generation of engineers,
                     leaders, and innovators. Our comprehensive ecosystem supports deep-tech exploration and holistic development.
                   </p>
                 </div>
               </motion.section>
 
               {/* Lab Facilities */}
-              <motion.section 
+              <motion.section
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -173,7 +212,7 @@ export function DepartmentPage() {
               </motion.section>
 
               {/* Research Focus */}
-              <motion.section 
+              <motion.section
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
@@ -195,7 +234,7 @@ export function DepartmentPage() {
               </motion.section>
 
               {/* Faculty Profiles */}
-              <motion.section 
+              <motion.section
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
@@ -206,7 +245,7 @@ export function DepartmentPage() {
                   </div>
                   <h2 className="text-3xl font-bold text-white">Faculty Profiles</h2>
                 </div>
-                
+
                 {loading ? (
                   <div className="text-gray-400 p-8 text-center bg-white/5 rounded-3xl border border-white/10">
                     Loading faculties...
@@ -245,9 +284,9 @@ export function DepartmentPage() {
             {/* Sticky Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-32 space-y-8">
-                
+
                 {/* At a Glance */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
@@ -288,19 +327,21 @@ export function DepartmentPage() {
                 </motion.div>
 
                 {/* Curriculum Summary */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
                   className="p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 backdrop-blur-sm"
                 >
-                  <h3 className="text-xl font-bold text-white mb-6">4-Year Curriculum Snapshot</h3>
+                  <h3 className="text-xl font-bold text-white mb-6">
+                    {department.level === 'PG' ? '2-Year Curriculum Snapshot' : department.level === 'PhD' ? 'PhD Progress Snapshot' : '4-Year Curriculum Snapshot'}
+                  </h3>
                   <div className="space-y-4 relative before:absolute before:inset-0 before:ml-[11px] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
                     {/* Time line items */}
-                    {['Year 1: Foundations', 'Year 2: Core Engineering', 'Year 3: Advanced Concepts', 'Year 4: Capstone & Industry'].map((year, idx) => (
+                    {getCurriculum(department.id).map((year, idx) => (
                       <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                         <div className="flex items-center justify-center w-6 h-6 rounded-full border border-white/20 bg-[#0f0f0f] text-gray-500 group-hover:text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow transition-colors z-10">
-                          <div className="w-2 h-2 bg-white/30 group-hover:bg-white rounded-full transition-colors"/>
+                          <div className="w-2 h-2 bg-white/30 group-hover:bg-white rounded-full transition-colors" />
                         </div>
                         <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2rem)] p-4 rounded-xl shadow border border-white/5 bg-white/5 backdrop-blur-sm text-sm font-medium text-gray-300">
                           {year}
@@ -308,13 +349,10 @@ export function DepartmentPage() {
                       </div>
                     ))}
                   </div>
-                  <button className="w-full mt-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold rounded-xl transition-colors">
-                    Download Full Syllabus
-                  </button>
                 </motion.div>
 
                 {/* Top Careers */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
