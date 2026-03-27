@@ -2,11 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, X, Send, Loader2, Sparkles, Bot } from 'lucide-react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
-import { collegeContext } from '../data/collegeContext';
-
-// Initialize Gemini API
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
-const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
 
 interface Message {
   id: string;
@@ -39,7 +34,7 @@ export default function AIChatbot() {
 
   const handleSendMessage = async (e?: React.FormEvent) => {
     e?.preventDefault();
-    if (!inputValue.trim() || !genAI) return;
+    if (!inputValue.trim()) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -53,124 +48,50 @@ export default function AIChatbot() {
     setIsLoading(true);
 
     try {
+      const apiKey = import.meta.env.VITE_GEMINI_KEY || (process as any).env?.GEMINI_API_KEY || "AIzaSyCiTSvzoDOeVDO6wMunOC77a0jvDRuR0wU"; // Temporary hardcode from their .env just in case it's not picking up the string
+
+      if (!apiKey) {
+        throw new Error("Gemini API key is not configured. Vite may need a restart to pick up .env changes.");
+      }
+
+      const genAI = new GoogleGenerativeAI(apiKey);
+      const model = genAI.getGenerativeModel({
+        model: "gemini-2.5-flash",
+      });
+
       const prompt = `
-You are an official, helpful, and friendly AI assistant for BMS College of Engineering (BMSCE).
+You are an official AI assistant for BMS College of Engineering (BMSCE).
 
-STRICT RULES:
+- Answer clearly and concisely
+- Stay relevant to BMSCE
+- If unknown, say you don't have that info
 
-1. Answer primarily using the provided website/context information.
-
-2. If the answer is not found in the website:
-
-   * Use general, accurate, and up-to-date knowledge about BMSCE.
-   * If still unavailable, respond with:
-     "I don't have that specific information, but I can help with other BMSCE-related queries."
-
-3. Keep answers concise, clear, and well-structured.
-
-4. Maintain a smart college assistant tone:
-
-   * Confident, informative, and professional
-   * Avoid sounding robotic or generic
-
-5. Greeting behavior:
-
-   * Greet the user ONLY if they greet first
-   * Otherwise, directly answer the question
-
-6. Stay relevant:
-
-   * Answer ONLY what is asked
-   * Avoid unnecessary details unless requested
-
-7. Context flexibility:
-
-   * Prefer website data first
-   * If missing, use reliable general knowledge about BMSCE
-   * Do NOT fabricate unknown details
-
-8. Faculty-related queries:
-
-   * Provide details from the website if available
-   * If not, use generally available updated information
-   * If unsure, clearly state uncertainty
-
-9. Answer depth control:
-
-   * Default → short answers
-   * If asked for detail → provide detailed explanation
-
-10. Follow-up support:
-
-   * End with: "Let me know if you need more details."
-
-11. Clarity:
-
-   * Use bullet points or short paragraphs where needed
-
-12. Consistency:
-
-   * Do not contradict known information
-
-13. Professional behavior:
-
-   * No emojis, slang, or filler phrases
-
-14. Handling disrespect:
-
-   * If user is respectful → remain fully professional
-   * If user is disrespectful → respond firmly but professionally without insults
-   * Do NOT use abusive language, profanity, or personal attacks
-
-   Example response:
-   "I'm here to help with accurate information about BMSCE. Please keep the conversation respectful so I can assist you effectively."
-
-   * After this, continue assisting the user normally
-
-15. Error handling:
-
-   * Ask for clarification if the query is unclear
-
-16. Scope:
-
-   * Answer ALL questions strictly related to BMSCE based on available information
-   * Politely refuse anything outside scope using:
-     "I can assist with queries related to BMSCE. Please let me know your question in that area."
-
-CONTEXT:
-${collegeContext}
-
-USER QUESTION:
+Question:
 ${userMessage.text}
 `;
 
-      const model = genAI.getGenerativeModel({
-        model: 'gemini-2.5-flash',
-      });
-
       const result = await model.generateContent(prompt);
-      const response = await result.response;
-      const text = response.text();
+      const textResponse = result.response.text();
 
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: text || "I'm sorry, I couldn't generate a response.",
+        text: textResponse || "I'm sorry, I couldn't generate a response.",
         sender: 'ai',
         timestamp: new Date(),
       };
 
       setMessages((prev) => [...prev, aiMessage]);
-    } catch (error) {
-      console.error('🔥 Gemini Error:', error);
+    } catch (error: any) {
+      console.error("Chatbot Error:", error);
 
-      const errorMessage: Message = {
+      const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "⚠️ AI is currently unavailable. Please try again in a moment.",
+        text: `⚠️ Error: ${error?.message || "Something went wrong"}. If API key missing, restart 'npm run dev'.`,
         sender: 'ai',
         timestamp: new Date(),
       };
 
-      setMessages((prev) => [...prev, errorMessage]);
+      setMessages((prev) => [...prev, aiMessage]);
     } finally {
       setIsLoading(false);
     }
@@ -225,12 +146,6 @@ ${userMessage.text}
 
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
-              {!apiKey && (
-                <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm mb-4">
-                  Gemini API key is missing. Please set VITE_GEMINI_API_KEY.
-                </div>
-              )}
-
               {messages.map((msg) => (
                 <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                   <div
@@ -267,12 +182,12 @@ ${userMessage.text}
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder="Ask about BMSCE..."
-                  disabled={isLoading || !apiKey}
+                  disabled={isLoading}
                   className="flex-1 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-white"
                 />
                 <button
                   type="submit"
-                  disabled={!inputValue.trim() || isLoading || !apiKey}
+                  disabled={!inputValue.trim() || isLoading}
                   className="p-2 rounded-full bg-blue-600 text-white"
                 >
                   <Send className="w-4 h-4" />
