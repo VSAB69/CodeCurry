@@ -16,10 +16,10 @@ export function HeroSection() {
     if (!textRef.current) return;
 
     const chars = textRef.current.querySelectorAll('.char');
-    
+
     gsap.fromTo(
       chars,
-      { 
+      {
         opacity: 0,
         y: 100,
         filter: 'blur(10px)',
@@ -53,19 +53,19 @@ export function HeroSection() {
   const title = "Where Engineers Become Legends";
 
   return (
-    <section 
-      ref={containerRef} 
+    <section
+      ref={containerRef}
       className="relative h-screen w-full overflow-hidden bg-[#0A0A0A] flex items-center justify-center"
     >
       {/* Background Image with Parallax */}
-      <motion.div 
+      <motion.div
         style={{ y, opacity }}
         className="absolute inset-0 z-0"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0A0A0A] z-10" />
-        <img 
-          src="https://www.collegebatch.com/static/clg-gallery/bms-college-of-engineering-bangalore-361123.webp" 
-          alt="BMSCE Campus" 
+        <img
+          src="https://www.collegebatch.com/static/clg-gallery/bms-college-of-engineering-bangalore-361123.webp"
+          alt="BMSCE Campus"
           className="w-full h-full object-cover scale-110"
           referrerPolicy="no-referrer"
         />
@@ -82,8 +82,8 @@ export function HeroSection() {
             B.M.S. College of Engineering
           </span>
         </div>
-        
-        <h1 
+
+        <h1
           ref={textRef}
           className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white mb-6 leading-[1.1]"
           style={{ perspective: '1000px' }}
@@ -98,11 +98,11 @@ export function HeroSection() {
             </span>
           ))}
         </h1>
-        
+
         <p className="hero-sub text-lg md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
           Since <span className="text-white font-semibold">1946</span>, shaping India's brightest minds in the heart of Bangalore.
         </p>
-        
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button className="hero-btn group relative px-8 py-4 bg-white text-black font-semibold rounded-full overflow-hidden transition-all hover:scale-105">
             <span className="relative z-10">Explore Campus</span>
@@ -111,29 +111,14 @@ export function HeroSection() {
               Explore Campus
             </span>
           </button>
-          
+
           <button className="hero-btn px-8 py-4 bg-transparent border border-white/20 text-white font-semibold rounded-full hover:bg-white/10 backdrop-blur-sm transition-all hover:scale-105">
             Apply Now
           </button>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
-      >
-        <span className="text-xs text-gray-400 uppercase tracking-widest mb-2">Scroll</span>
-        <div className="w-[1px] h-12 bg-white/20 relative overflow-hidden">
-          <motion.div 
-            className="w-full h-1/2 bg-white absolute top-0"
-            animate={{ top: ['-50%', '100%'] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-          />
-        </div>
-      </motion.div>
+
     </section>
   );
 }

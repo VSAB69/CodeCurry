@@ -26,9 +26,8 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black/50 backdrop-blur-md border-b border-white/10 py-4' : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/50 backdrop-blur-md border-b border-white/10 py-4' : 'bg-transparent py-6'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold tracking-tighter text-white z-10 relative group">
@@ -42,9 +41,8 @@ export function Navbar() {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-full ${
-                  isActive ? 'text-white' : 'text-gray-400 hover:text-white'
-                }`}
+                className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-full ${isActive ? 'text-white' : 'text-gray-400 hover:text-white'
+                  }`}
               >
                 {isActive && (
                   <motion.div

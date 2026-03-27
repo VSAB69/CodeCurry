@@ -56,8 +56,8 @@ export function CampusLife() {
                     <button
                         onClick={() => setIsNightMode(!isNightMode)}
                         className={`p-3 rounded-full backdrop-blur-md border transition-all duration-500 ${isNightMode
-                            ? 'bg-white/10 border-white/20 text-yellow-300 shadow-[0_0_20px_rgba(253,224,71,0.2)]'
-                            : 'bg-black/50 border-white/10 text-blue-300 shadow-[0_0_20px_rgba(59,130,246,0.2)]'
+                                ? 'bg-white/10 border-white/20 text-yellow-300 shadow-[0_0_20px_rgba(253,224,71,0.2)]'
+                                : 'bg-black/50 border-white/10 text-blue-300 shadow-[0_0_20px_rgba(59,130,246,0.2)]'
                             }`}
                     >
                         {isNightMode ? <Moon className="w-6 h-6" /> : <Sun className="w-6 h-6" />}
@@ -228,87 +228,118 @@ export function CampusLife() {
                 </section>
 
                 {/* 5. LABS & INNOVATION */}
-                <section className="py-32 relative">
+                <section className="py-32 relative bg-[#0A0A0A]">
                     <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal-section">
-                            <div>
-                                <h2 className="text-4xl md:text-5xl font-black mb-4">Labs & Innovation</h2>
-                                <p className="text-gray-400 text-lg">130+ state-of-the-art laboratories across departments.</p>
-                            </div>
-                            <div className="mt-6 md:mt-0 flex items-center gap-2 text-blue-400 font-medium">
-                                <span>Scroll to explore</span> <ArrowRight className="w-5 h-5" />
-                            </div>
+                        <div className="text-center mb-20 reveal-section">
+                            <h2 className="text-5xl md:text-7xl font-black mb-6 text-white tracking-tight">Labs & Innovation</h2>
+                            <p className="text-gray-400 text-xl max-w-2xl mx-auto">130+ state-of-the-art laboratories where ideas transform into reality.</p>
                         </div>
 
-                        <div className="flex gap-6 overflow-x-auto pb-12 snap-x snap-mandatory hide-scrollbar">
-                            {[
-                                { title: "AI & Machine Learning Lab", desc: "High-performance computing clusters for deep learning models.", color: "blue", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop" },
-                                { title: "Robotics & Automation", desc: "Industrial robotic arms and automation control systems.", color: "purple", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop" },
-                                { title: "Power Electronics", desc: "Advanced testing equipment for electrical systems.", color: "emerald", img: "https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=2070&auto=format&fit=crop" },
-                                { title: "Material Testing", desc: "Heavy-duty civil engineering testing infrastructure.", color: "orange", img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop" }
-                            ].map((lab, i) => (
-                                <motion.div
-                                    key={i}
-                                    className="min-w-[350px] md:min-w-[450px] h-[500px] rounded-3xl relative overflow-hidden snap-center group cursor-pointer"
-                                    whileHover={{ scale: 0.98 }}
-                                >
-                                    <img src={lab.img} alt={lab.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                                    <div className={`absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity`} />
-
-                                    {/* Scanner Effect on Hover */}
-                                    <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-${lab.color}-500/20 to-transparent h-20 -translate-y-full group-hover:animate-scan`} />
-
-                                    <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                                        <div className={`w-12 h-1 h-1 bg-${lab.color}-500 mb-6 rounded-full`} />
-                                        <h3 className="text-3xl font-bold text-white mb-3">{lab.title}</h3>
-                                        <p className="text-gray-300">{lab.desc}</p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+                            {/* Large Feature Lab */}
+                            <div className="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group reveal-section">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop" alt="Advanced Robotics" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/50 backdrop-blur-md mb-4 w-max">
+                                        <FlaskConical className="w-4 h-4 text-blue-400" />
+                                        <span className="text-xs font-bold text-blue-400 uppercase tracking-wider">Center of Excellence</span>
                                     </div>
-                                </motion.div>
-                            ))}
+                                    <h3 className="text-4xl font-bold text-white mb-3">Advanced Robotics & AI</h3>
+                                    <p className="text-gray-300 text-lg max-w-xl">Equipped with industrial robotic arms, autonomous systems, and high-performance computing clusters for deep learning research.</p>
+                                </div>
+                            </div>
+
+                            {/* Smaller Lab 1 */}
+                            <div className="rounded-3xl overflow-hidden relative group reveal-section">
+                                <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?q=80&w=2070&auto=format&fit=crop" alt="Power Electronics" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/20" />
+                                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                                    <h3 className="text-2xl font-bold text-white mb-2">Power Electronics</h3>
+                                    <p className="text-gray-400 text-sm">Next-gen energy systems and smart grid technologies.</p>
+                                </div>
+                            </div>
+
+                            {/* Smaller Lab 2 */}
+                            <div className="rounded-3xl overflow-hidden relative group reveal-section">
+                                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=2070&auto=format&fit=crop" alt="Biotech" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/20" />
+                                <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                                    <h3 className="text-2xl font-bold text-white mb-2">Biotechnology</h3>
+                                    <p className="text-gray-400 text-sm">Advanced genetic engineering and molecular biology research.</p>
+                                </div>
+                            </div>
+
+                            {/* Wide Lab */}
+                            <div className="md:col-span-3 rounded-3xl overflow-hidden relative group reveal-section">
+                                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop" alt="Material Testing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+                                <div className="absolute inset-0 p-8 flex flex-col justify-center max-w-2xl">
+                                    <h3 className="text-3xl font-bold text-white mb-3">Heavy Structures & Material Testing</h3>
+                                    <p className="text-gray-300 text-lg mb-6">State-of-the-art civil engineering infrastructure for testing concrete, steel, and composite materials under extreme loads.</p>
+                                    <div className="flex gap-4">
+                                        <span className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-white backdrop-blur-md">Universal Testing Machines</span>
+                                        <span className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm text-white backdrop-blur-md">Wind Tunnel</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 {/* 6. HOSTELS */}
-                <section className="py-32 relative bg-black border-y border-white/5">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(249,115,22,0.1)_0%,transparent_50%)]" />
+                <section className="py-32 relative bg-white text-black">
                     <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                        <div className="text-center mb-20 reveal-section">
-                            <h2 className="text-4xl md:text-6xl font-black mb-6">Your Home Away From Home</h2>
-                            <p className="text-gray-400 text-xl max-w-2xl mx-auto">Accommodating ~2900 students with modern amenities, 24/7 security, and a vibrant community life.</p>
-                        </div>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 h-[600px]">
-                            {/* Main Image Area */}
-                            <div className="lg:col-span-8 rounded-3xl overflow-hidden relative group">
-                                <img src="https://content3.jdmagicbox.com/v2/comp/bangalore/b3/080pxx80.xx80.170901133203.v7b3/catalogue/bmsce-hostel-hanumantha-nagar-bangalore-35od262q2a.jpg" alt="Hostel" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                                <div className="absolute bottom-0 left-0 p-8">
-                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 border border-orange-500/50 backdrop-blur-md mb-4">
-                                        <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-                                        <span className="text-xs font-bold text-orange-400 uppercase">Premium Living</span>
+                            <div className="reveal-section order-2 lg:order-1">
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="space-y-4 mt-12">
+                                        <div className="rounded-3xl overflow-hidden h-64">
+                                            <img src="https://content3.jdmagicbox.com/v2/comp/bangalore/b3/080pxx80.xx80.170901133203.v7b3/catalogue/bmsce-hostel-hanumantha-nagar-bangalore-35od262q2a.jpg" alt="Hostel Exterior" className="w-full h-full object-cover" />
+                                        </div>
+                                        <div className="rounded-3xl overflow-hidden h-48">
+                                            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=2057&auto=format&fit=crop" alt="Hostel Lounge" className="w-full h-full object-cover" />
+                                        </div>
                                     </div>
-                                    <h3 className="text-3xl font-bold text-white">Main Hostel Blocks</h3>
+                                    <div className="space-y-4">
+                                        <div className="rounded-3xl overflow-hidden h-48 bg-orange-100 p-6 flex flex-col justify-center">
+                                            <h4 className="text-4xl font-black text-orange-600 mb-2">2900+</h4>
+                                            <p className="text-orange-900 font-medium">Students Accommodated</p>
+                                        </div>
+                                        <div className="rounded-3xl overflow-hidden h-64">
+                                            <img src="https://content3.jdmagicbox.com/v2/comp/bangalore/r3/080pxx80.xx80.170906203243.w2r3/catalogue/bms-hostel-banashankari-bangalore-hostels-hsjq80l402.jpg" alt="Dining Hall" className="w-full h-full object-cover" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* Features List */}
-                            <div className="lg:col-span-4 flex flex-col gap-4">
-                                {[
-                                    { title: "Room Types", desc: "Single, Twin, and Triple sharing available.", img: "https://content3.jdmagicbox.com/v2/comp/bangalore/b3/080pxx80.xx80.170901133203.v7b3/catalogue/bmsce-hostel-hanumantha-nagar-bangalore-94en6ooecf.jpg" },
-                                    { title: "Dining & Mess", desc: "Centralized kitchen serving hygienic, nutritious meals.", img: "https://content3.jdmagicbox.com/v2/comp/bangalore/r3/080pxx80.xx80.170906203243.w2r3/catalogue/bms-hostel-banashankari-bangalore-hostels-hsjq80l402.jpg" },
-                                    { title: "Amenities", desc: "Wi-Fi, 24/7 Power, Gym, TV Lounges, Study Rooms.", img: "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=2057&auto=format&fit=crop" }
-                                ].map((feature, i) => (
-                                    <div key={i} className="flex-1 rounded-3xl bg-white/5 border border-white/10 overflow-hidden relative group cursor-pointer">
-                                        <img src={feature.img} alt={feature.title} className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500" />
-                                        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent" />
-                                        <div className="absolute inset-0 p-6 flex flex-col justify-center">
-                                            <h4 className="text-xl font-bold text-white mb-1 group-hover:text-orange-400 transition-colors">{feature.title}</h4>
-                                            <p className="text-sm text-gray-300">{feature.desc}</p>
+                            <div className="reveal-section order-1 lg:order-2">
+                                <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tight text-gray-900">Your Home <br /><span className="text-orange-500">Away From Home</span></h2>
+                                <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+                                    Experience a vibrant community life in our modern, secure, and well-equipped hostels designed to provide the perfect environment for both study and relaxation.
+                                </p>
+
+                                <div className="space-y-6">
+                                    {[
+                                        { title: "Comfortable Living", desc: "Well-furnished single, twin, and triple sharing rooms with ample natural light." },
+                                        { title: "Nutritious Dining", desc: "Centralized modern kitchen serving hygienic, diverse, and delicious meals." },
+                                        { title: "24/7 Security & Support", desc: "Round-the-clock security, CCTV surveillance, and resident wardens." },
+                                        { title: "Recreation & Fitness", desc: "High-speed Wi-Fi, TV lounges, indoor games, and an exclusive gymnasium." }
+                                    ].map((feature, i) => (
+                                        <div key={i} className="flex gap-4">
+                                            <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                                                <Home className="w-6 h-6 text-orange-600" />
+                                            </div>
+                                            <div>
+                                                <h4 className="text-xl font-bold text-gray-900 mb-1">{feature.title}</h4>
+                                                <p className="text-gray-600">{feature.desc}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </section>

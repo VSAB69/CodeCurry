@@ -3,23 +3,23 @@ import { motion, useScroll, useTransform, AnimatePresence, useMotionValue, useSp
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PageTransition } from '../components/PageTransition';
-import { 
-  TrendingUp, 
-  Briefcase, 
-  Globe, 
-  Award, 
-  Users, 
-  BookOpen, 
-  Target, 
-  CheckCircle2, 
-  Play, 
+import {
+  TrendingUp,
+  Briefcase,
+  Globe,
+  Award,
+  Users,
+  BookOpen,
+  Target,
+  CheckCircle2,
+  Play,
   ArrowRight,
   MapPin,
   Building2,
   GraduationCap,
   ChevronDown
 } from 'lucide-react';
-import { 
+import {
   BarChart, Bar, Cell, PieChart, Pie, ResponsiveContainer, Tooltip, XAxis, YAxis
 } from 'recharts';
 
@@ -44,7 +44,7 @@ const PACKAGE_DISTRIBUTION = [
 ];
 
 const COMPANIES = [
-  "Amazon", "Microsoft", "Adobe", "Oracle", "IBM", "Accenture", "Bosch", 
+  "Amazon", "Microsoft", "Adobe", "Oracle", "IBM", "Accenture", "Bosch",
   "Goldman Sachs", "Morgan Stanley", "Samsung", "Cisco", "Intel", "TCS", "Infosys", "Wipro"
 ];
 
@@ -77,7 +77,7 @@ export function PlacementsPage() {
     counters.forEach(counter => {
       const target = parseFloat(counter.getAttribute('data-target') || '0');
       const isFloat = target % 1 !== 0;
-      
+
       ScrollTrigger.create({
         trigger: counter,
         start: "top 85%",
@@ -88,7 +88,7 @@ export function PlacementsPage() {
             duration: 2.5,
             ease: "power3.out",
             snap: { innerHTML: isFloat ? 0.1 : 1 },
-            onUpdate: function() {
+            onUpdate: function () {
               if (counter) {
                 const val = Number(this.targets()[0].innerHTML);
                 counter.innerHTML = isFloat ? val.toFixed(1) : Math.round(val).toString();
@@ -107,15 +107,15 @@ export function PlacementsPage() {
   return (
     <PageTransition>
       <div className="bg-[#0A0A0A] min-h-screen text-white overflow-hidden selection:bg-blue-500/30">
-        
+
         {/* 1. HERO (CINEMATIC ENTRY) */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <motion.div style={{ y: yBackground, opacity: opacityHero }} className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-black/60 z-10" />
-            <video 
-              autoPlay 
-              loop 
-              muted 
+            <video
+              autoPlay
+              loop
+              muted
               playsInline
               className="w-full h-full object-cover opacity-40"
               poster="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
@@ -148,34 +148,23 @@ export function PlacementsPage() {
             </motion.div>
 
             {/* Floating Numbers */}
-            <motion.div 
-              animate={{ y: [0, -20, 0] }} 
+            <motion.div
+              animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-1/4 left-10 hidden lg:block p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 rotate-[-10deg]"
+              className="absolute top-4 left-1 hidden lg:block p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 rotate-[-10deg]"
             >
               <div className="text-2xl font-bold text-green-400">₹51.5 LPA</div>
               <div className="text-xs text-gray-500 uppercase">Highest Package</div>
             </motion.div>
-            <motion.div 
-              animate={{ y: [0, 20, 0] }} 
+            <motion.div
+              animate={{ y: [0, 20, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute bottom-1/4 right-10 hidden lg:block p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 rotate-[10deg]"
+              className="absolute bottom-8 right-5 hidden lg:block p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 rotate-[10deg]"
             >
               <div className="text-2xl font-bold text-blue-400">1307+</div>
               <div className="text-xs text-gray-500 uppercase">Total Offers</div>
             </motion.div>
           </div>
-
-          {/* Scroll Indicator */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 1 }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-30"
-          >
-            <span className="text-xs text-gray-500 uppercase tracking-widest">Scroll to Explore</span>
-            <div className="w-[1px] h-16 bg-gradient-to-b from-white/50 to-transparent" />
-          </motion.div>
         </section>
 
         {/* 2. LIVE STATS WALL (INSANE VISUAL) */}
@@ -188,7 +177,7 @@ export function PlacementsPage() {
                 { label: "Companies Visited", value: 383, prefix: "", suffix: "+", color: "from-purple-500/20 to-pink-500/5", text: "text-purple-400" },
                 { label: "Total Offers", value: 1307, prefix: "", suffix: "", color: "from-orange-500/20 to-red-500/5", text: "text-orange-400" }
               ].map((stat, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -217,11 +206,11 @@ export function PlacementsPage() {
         <section className="py-20 bg-black border-y border-white/5 overflow-hidden relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0%,transparent_70%)] pointer-events-none" />
           <h2 className="text-center text-sm font-bold text-gray-500 uppercase tracking-widest mb-12">Trusted by Industry Leaders</h2>
-          
+
           <div className="relative w-full flex flex-col gap-8">
             <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
-            
+
             <div className="flex whitespace-nowrap animate-marquee items-center">
               {[...COMPANIES, ...COMPANIES].map((company, i) => (
                 <div key={i} className="mx-8 group relative cursor-pointer">
@@ -247,7 +236,7 @@ export function PlacementsPage() {
         <section className="py-32 relative">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              
+
               {/* Domain Wise */}
               <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md">
                 <h3 className="text-2xl font-bold mb-8">Domain-wise Placements</h3>
@@ -318,7 +307,7 @@ export function PlacementsPage() {
                 { icon: TrendingUp, label: "Growth" }
               ].map((step, i, arr) => (
                 <React.Fragment key={i}>
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -333,7 +322,7 @@ export function PlacementsPage() {
                     <span className="font-bold text-gray-300">{step.label}</span>
                   </motion.div>
                   {i < arr.length - 1 && (
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, width: 0 }}
                       whileInView={{ opacity: 1, width: "auto" }}
                       viewport={{ once: true }}
@@ -363,9 +352,9 @@ export function PlacementsPage() {
             <div className="relative">
               {/* Center Line */}
               <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-white/10 -translate-x-1/2 hidden md:block" />
-              
+
               {/* Glowing Line Progress (Animated via CSS/Framer) */}
-              <motion.div 
+              <motion.div
                 className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue-500 via-purple-500 to-emerald-500 -translate-x-1/2 hidden md:block origin-top"
                 initial={{ scaleY: 0 }}
                 whileInView={{ scaleY: 1 }}
@@ -382,7 +371,7 @@ export function PlacementsPage() {
                   { title: "Offer & Onboarding", desc: "Securing the dream job with top-tier compensation.", points: ["Salary Negotiation", "Offer Acceptance", "Pre-joining Sessions"], icon: Award, color: "emerald" }
                 ].map((step, i) => (
                   <div key={i} className={`relative flex flex-col md:flex-row items-center justify-between md:h-64 ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                    
+
                     {/* Empty space for alternating layout */}
                     <div className="hidden md:block w-5/12" />
 
@@ -394,7 +383,7 @@ export function PlacementsPage() {
                     </div>
 
                     {/* Card */}
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true, margin: "-10%" }}
@@ -404,16 +393,16 @@ export function PlacementsPage() {
                     >
                       <div className={`p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md relative overflow-hidden group hover:border-${step.color}-500/50 transition-colors`}>
                         <div className={`absolute -right-10 -top-10 w-32 h-32 bg-${step.color}-500/10 rounded-full blur-3xl group-hover:bg-${step.color}-500/20 transition-colors`} />
-                        
+
                         <div className="flex items-center gap-4 mb-4">
                           <div className={`p-3 rounded-xl bg-${step.color}-500/10 text-${step.color}-400`}>
                             <step.icon className="w-6 h-6" />
                           </div>
                           <h3 className="text-2xl font-bold text-white">{step.title}</h3>
                         </div>
-                        
+
                         <p className="text-gray-400 mb-6">{step.desc}</p>
-                        
+
                         <ul className="space-y-2">
                           {step.points.map((point, j) => (
                             <li key={j} className="flex items-center gap-2 text-sm text-gray-300">
@@ -435,7 +424,7 @@ export function PlacementsPage() {
         <section className="py-32 relative">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              
+
               {/* Training */}
               <div>
                 <h2 className="text-4xl font-black mb-12">Training & Preparation</h2>
@@ -446,7 +435,7 @@ export function PlacementsPage() {
                     { title: "Coding Practice", desc: "Competitive programming and DSA bootcamps." },
                     { title: "Resume Building", desc: "Crafting ATS-friendly, impactful resumes." }
                   ].map((item, i) => (
-                    <motion.div 
+                    <motion.div
                       key={i}
                       whileHover={{ x: 10 }}
                       className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-blue-500/50 transition-all cursor-pointer group"
@@ -470,13 +459,13 @@ export function PlacementsPage() {
                 <h2 className="text-4xl font-black mb-12">Internships to PPOs</h2>
                 <div className="relative h-full min-h-[400px] rounded-3xl bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-white/10 p-10 overflow-hidden flex flex-col justify-center">
                   <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
-                  
+
                   <div className="relative z-10 text-center">
                     <div className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500 mb-4">
                       775+
                     </div>
                     <div className="text-2xl font-bold text-white mb-8">Internship Offers (2024-25)</div>
-                    
+
                     <div className="flex flex-col gap-4">
                       <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
                         <span className="text-purple-400 font-bold">Step 1:</span> Secure 6-month industry internship
@@ -519,13 +508,13 @@ export function PlacementsPage() {
         <section className="py-32 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent z-0" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl bg-blue-500/10 blur-[100px] rounded-full z-0 pointer-events-none" />
-          
+
           <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-            <h2 className="text-5xl md:text-7xl font-black text-white mb-8">Your Career <br/> Starts Here.</h2>
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-8">Your Career <br /> Starts Here.</h2>
             <p className="text-xl text-gray-400 mb-12">Join the legacy of excellence and secure your future with BMSCE.</p>
-            
+
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <motion.button 
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-10 py-5 bg-white text-black font-bold rounded-full text-lg flex items-center justify-center gap-3 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all"
@@ -547,7 +536,7 @@ function ExpandableCard({ title, content }: { title: string, content: string, ke
 
   return (
     <div className="border border-white/10 rounded-2xl bg-white/5 overflow-hidden backdrop-blur-sm">
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
       >

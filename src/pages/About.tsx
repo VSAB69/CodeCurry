@@ -1,238 +1,329 @@
-import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from 'lenis';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { PageTransition } from '../components/PageTransition';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Globe, Award, FlaskConical } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-gsap.registerPlugin(ScrollTrigger);
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
-export function About() {
-  const containerRef = useRef<HTMLDivElement>(null);
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+};
+
+function Counter({ to, suffix = "", duration = 2 }: { to: number, suffix?: string, duration?: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
 
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
-
-    lenis.on('scroll', ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    gsap.ticker.lagSmoothing(0);
-
-    const ctx = gsap.context(() => {
-      
-      // SCENE 1: Intro (Pinned)
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".scene-1",
-          start: "top top",
-          end: "+=100%",
-          pin: true,
-          anticipatePin: 1,
-          scrub: true,
+    if (inView) {
+      let startTime: number | null = null;
+      const step = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
+        const easeProgress = 1 - Math.pow(1 - progress, 4);
+        setCount(Math.floor(easeProgress * to));
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
         }
-      })
-      .to(".s1-img", { scale: 1.1, ease: "none", duration: 1 }, 0)
-      .fromTo(".s1-text", { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: "none", duration: 1 }, 0);
+      };
+      window.requestAnimationFrame(step);
+    }
+  }, [inView, to, duration]);
 
-      // SCENE 2: Foundation (Morph)
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".scene-2",
-          start: "top top",
-          end: "+=100%",
-          pin: true,
-          anticipatePin: 1,
-          scrub: true,
-        }
-      })
-      .to(".s2-bg-wrapper", { scale: 1.05, ease: "none", duration: 1 }, 0)
-      .to(".s2-old-img", { opacity: 0, ease: "none", duration: 1 }, 0)
-      .fromTo(".s2-text", { opacity: 0, y: 30 }, { opacity: 1, y: 0, ease: "none", duration: 1 }, 0);
+  return <span ref={ref}>{count.toLocaleString()}{suffix}</span>;
+}
 
-      // SCENE 3: Time Flow (Horizontal Scroll)
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".scene-3",
-          start: "top top",
-          end: "+=200%",
-          pin: true,
-          anticipatePin: 1,
-          scrub: true,
-        }
-      })
-      .to(".s3-wrapper", { xPercent: -66.666, ease: "none", duration: 1 });
-
-      // SCENE 4: Knowledge (Depth Effect)
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".scene-4",
-          start: "top top",
-          end: "+=100%",
-          pin: true,
-          anticipatePin: 1,
-          scrub: true,
-        }
-      })
-      .to(".s4-bg", { yPercent: 15, ease: "none", duration: 1 }, 0)
-      .to(".s4-mid", { yPercent: 5, ease: "none", duration: 1 }, 0);
-
-      // SCENE 5: Future + CTA
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".scene-5",
-          start: "top top",
-          end: "+=100%",
-          pin: true,
-          anticipatePin: 1,
-          scrub: true,
-        }
-      })
-      .to(".s5-dark-overlay", { opacity: 0, ease: "none", duration: 1 }, 0)
-      .to(".s5-text", { opacity: 0, ease: "none", duration: 0.5 }, 0)
-      .fromTo(".s5-cta-wrapper", { scale: 0.95, opacity: 0 }, { scale: 1, opacity: 1, ease: "none", duration: 1 }, 0);
-
-    }, containerRef);
-
-    return () => {
-      ctx.revert();
-      lenis.destroy();
-    };
-  }, []);
-
+export function About() {
   return (
     <PageTransition>
-      <div ref={containerRef} className="bg-black text-white overflow-hidden font-sans">
-        
-        {/* SCENE 1: INTRO */}
-        <section className="scene-1 relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
-          <img 
-            src="https://www.collegebatch.com/static/clg-gallery/bms-college-of-engineering-bangalore-361119.webp" 
-            alt="Vision" 
-            className="s1-img absolute inset-0 w-full h-full object-cover opacity-50 sepia-[0.3]"
-            referrerPolicy="no-referrer"
+      <div className="bg-[#0A0A0A] text-white font-sans min-h-screen selection:bg-blue-500/30">
+
+        {/* 1. HERO SECTION */}
+        <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+          <img
+            src="https://www.collegebatch.com/static/clg-gallery/bms-college-of-engineering-bangalore-361119.webp"
+            alt="BMSCE Campus"
+            className="absolute inset-0 w-full h-full object-cover opacity-40"
           />
-          <div className="absolute inset-0 bg-black/40" />
-          <h1 className="s1-text relative z-10 text-4xl md:text-6xl lg:text-8xl font-serif italic tracking-tight text-center px-4">
-            Every legacy begins <br />
-            <span className="font-sans not-italic font-bold text-white uppercase tracking-tighter">with a vision.</span>
-          </h1>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-[#0A0A0A]" />
+          <motion.div
+            className="relative z-10 text-center px-4 max-w-4xl mx-auto"
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+          >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+              About BMS College of Engineering
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 font-light">
+              A premier engineering institution shaping future innovators since 1946
+            </p>
+          </motion.div>
         </section>
 
-        {/* SCENE 2: FOUNDATION */}
-        <section className="scene-2 relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
-          <div className="s2-bg-wrapper absolute inset-0 w-full h-full">
-            <img 
-              src="https://www.collegebatch.com/static/clg-gallery/bms-college-of-engineering-bangalore-361123.webp" 
-              alt="Modern Campus" 
-              className="absolute inset-0 w-full h-full object-cover opacity-60"
-              referrerPolicy="no-referrer"
-            />
-            <img 
-              src="https://www.collegebatch.com/static/clg-gallery/bms-college-of-engineering-bangalore-361119.webp" 
-              alt="Old Campus" 
-              className="s2-old-img absolute inset-0 w-full h-full object-cover opacity-80 sepia-[0.5]"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-black/50" />
-          </div>
-          <div className="s2-text relative z-10 text-center px-4">
-            <div className="text-blue-400 font-mono text-xl md:text-2xl mb-6 tracking-widest">1946</div>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              The beginning of <br />
-              <span className="text-gray-400 font-serif italic">something bigger.</span>
-            </h2>
+        {/* 2. OVERVIEW */}
+        <section className="py-24 px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUp}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white tracking-tight">A Legacy of Excellence</h2>
+              <p className="text-lg text-gray-400 mb-6 leading-relaxed">
+                Founded in 1946, BMS College of Engineering (BMSCE) is one of India's first private engineering colleges. Located in the heart of Bangalore, the IT capital of India, BMSCE has been at the forefront of technical education for over seven decades.
+              </p>
+              <p className="text-lg text-gray-400 leading-relaxed">
+                Our institution is dedicated to producing highly skilled engineers and leaders who contribute to the technological and socio-economic development of the nation and the world.
+              </p>
+            </motion.div>
+            <motion.div
+              className="rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={fadeInUp}
+            >
+              <img
+                src="https://www.collegebatch.com/static/clg-gallery/bms-college-of-engineering-bangalore-361123.webp"
+                alt="BMSCE Campus Building"
+                className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity"
+              />
+            </motion.div>
           </div>
         </section>
 
-        {/* SCENE 3: TIME FLOW */}
-        <section className="scene-3 relative h-screen w-full overflow-hidden bg-black">
-          <div className="s3-wrapper flex h-full w-[300vw]">
-            {/* Panel 1 */}
-            <div className="w-screen h-full relative flex items-center justify-center">
-              <img src="https://www.bmsca.org/assets/images/portfolio/library/4.jpg" alt="Growth" className="absolute inset-0 w-full h-full object-cover opacity-40" referrerPolicy="no-referrer" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/80" />
-              <h2 className="relative z-10 text-6xl md:text-9xl font-black uppercase tracking-tighter text-white">Growth</h2>
+        {/* 3. HISTORY & LEGACY */}
+        <section className="py-24 bg-[#050505] px-6 lg:px-8 border-y border-white/5">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white tracking-tight">History & Legacy</h2>
+              <p className="text-lg text-gray-400">A timeline of our growth and key milestones.</p>
+            </motion.div>
+
+            <div className="space-y-12">
+              {[
+                { year: "1946", title: "Foundation", desc: "Established by Late Sri. B. M. Sreenivasaiah, a visionary and philanthropist." },
+                { year: "2008", title: "Autonomous Status", desc: "Granted academic autonomy by UGC, allowing for innovative curriculum design." },
+                { year: "2013", title: "TEQIP Institution", desc: "Recognized under the Technical Education Quality Improvement Programme." },
+                { year: "2023", title: "Diamond Jubilee & Beyond", desc: "Continuing to set benchmarks in engineering education and research globally." }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="flex gap-6 md:gap-8"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                  variants={fadeInUp}
+                >
+                  <div className="flex flex-col items-center">
+                    <div className="w-4 h-4 rounded-full bg-blue-500 mt-2 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
+                    {index !== 3 && <div className="w-0.5 h-full bg-blue-900/50 mt-2" />}
+                  </div>
+                  <div className="pb-8">
+                    <span className="text-blue-400 font-bold text-xl">{item.year}</span>
+                    <h3 className="text-2xl font-semibold text-white mt-1 mb-2">{item.title}</h3>
+                    <p className="text-gray-400 text-lg">{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-            {/* Panel 2 */}
-            <div className="w-screen h-full relative flex items-center justify-center">
-              <img src="https://content3.jdmagicbox.com/v2/comp/bangalore/b3/080pxx80.xx80.170901133203.v7b3/catalogue/bmsce-hostel-hanumantha-nagar-bangalore-35od262q2a.jpg" alt="Expansion" className="absolute inset-0 w-full h-full object-cover opacity-40" referrerPolicy="no-referrer" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/80" />
-              <h2 className="relative z-10 text-6xl md:text-9xl font-black uppercase tracking-tighter text-white">Expansion</h2>
-            </div>
-            {/* Panel 3 */}
-            <div className="w-screen h-full relative flex items-center justify-center">
-              <img src="https://content3.jdmagicbox.com/v2/comp/bangalore/b3/080pxx80.xx80.170901133203.v7b3/catalogue/bmsce-hostel-hanumantha-nagar-bangalore-94en6ooecf.jpg" alt="Innovation" className="absolute inset-0 w-full h-full object-cover opacity-40" referrerPolicy="no-referrer" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/80" />
-              <h2 className="relative z-10 text-6xl md:text-9xl font-black uppercase tracking-tighter text-white">Innovation</h2>
-            </div>
           </div>
         </section>
 
-        {/* SCENE 4: KNOWLEDGE */}
-        <section className="scene-4 relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
-          <div className="absolute inset-0 z-0">
-            {/* Background Layer (Slow) */}
-            <img 
-              src="https://www.collegebatch.com/static/clg-gallery/bms-college-of-engineering-bangalore-361123.webp" 
-              alt="Knowledge BG" 
-              className="s4-bg absolute inset-0 w-full h-[120%] -top-[10%] object-cover opacity-30"
-              referrerPolicy="no-referrer"
-            />
-            {/* Mid Layer (Medium) */}
-            <div className="s4-mid absolute inset-0 w-full h-[110%] -top-[5%] bg-gradient-to-t from-black via-transparent to-black opacity-80" />
-          </div>
-          <div className="relative z-10 text-center px-4">
-            <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none">
-              Knowledge.<br/>
-              <span className="text-gray-500">Built.</span><br/>
-              <span className="font-serif italic text-blue-500 lowercase">Daily.</span>
-            </h2>
+        {/* 4. ACADEMICS OVERVIEW */}
+        <section className="py-24 px-6 lg:px-8 max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white tracking-tight">Academics Overview</h2>
+            <p className="text-lg text-gray-400">Comprehensive programs designed for the future.</p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {[
+              { title: "Undergraduate (UG)", desc: "14 B.E. programs spanning core and emerging engineering disciplines.", icon: <BookOpen className="w-8 h-8 text-blue-400" /> },
+              { title: "Postgraduate (PG)", desc: "M.Tech, MBA, and MCA programs fostering advanced specialization.", icon: <Award className="w-8 h-8 text-blue-400" /> },
+              { title: "Doctoral (PhD)", desc: "14 recognized research centers driving innovation and discovery.", icon: <FlaskConical className="w-8 h-8 text-blue-400" /> }
+            ].map((prog, i) => (
+              <motion.div key={i} variants={fadeInUp} className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                <div className="mb-6 bg-blue-500/10 w-16 h-16 rounded-xl flex items-center justify-center border border-blue-500/20">
+                  {prog.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{prog.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{prog.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </section>
+
+        {/* 5. INFRASTRUCTURE */}
+        <section className="py-24 bg-[#050505] px-6 lg:px-8 border-y border-white/5">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white tracking-tight">World-Class Infrastructure</h2>
+              <p className="text-lg text-gray-400">Facilities that empower learning and innovation.</p>
+            </motion.div>
+
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+            >
+              {[
+                { title: "Advanced Labs", desc: "130+ state-of-the-art laboratories equipped with modern technology.", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" },
+                { title: "Central Library", desc: "A vast repository of knowledge with digital and physical resources.", img: "https://www.bmsca.org/assets/images/portfolio/library/4.jpg" },
+                { title: "Student Hostels", desc: "Comfortable, secure, and vibrant living spaces for over 2900 students.", img: "https://content3.jdmagicbox.com/v2/comp/bangalore/b3/080pxx80.xx80.170901133203.v7b3/catalogue/bmsce-hostel-hanumantha-nagar-bangalore-35od262q2a.jpg" }
+              ].map((infra, i) => (
+                <motion.div key={i} variants={fadeInUp} className="group rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300">
+                  <div className="h-48 overflow-hidden relative">
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
+                    <img src={infra.img} alt={infra.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-white mb-2">{infra.title}</h3>
+                    <p className="text-gray-400">{infra.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </section>
 
-        {/* SCENE 5: FUTURE + CTA */}
-        <section className="scene-5 relative h-screen w-full flex items-center justify-center overflow-hidden bg-gray-50">
-          {/* Dark Overlay that fades out */}
-          <div className="s5-dark-overlay absolute inset-0 bg-black z-20" />
-          
-          {/* Initial Text (on dark) */}
-          <h2 className="s5-text absolute z-30 text-5xl md:text-8xl font-serif italic text-white text-center px-4">
-            Now it's your turn.
-          </h2>
+        {/* 6. GLOBAL PRESENCE */}
+        <section className="py-24 px-6 lg:px-8 max-w-7xl mx-auto">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={fadeInUp}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white tracking-tight">Global Presence</h2>
+              <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+                Our impact extends far beyond the campus. With a strong alumni network spread across the globe and deep-rooted industry connections, BMSCE students are positioned for international success.
+              </p>
+              <div className="grid grid-cols-2 gap-8">
+                <div>
+                  <div className="text-4xl font-black text-blue-400 mb-2">
+                    <Counter to={40000} suffix="+" />
+                  </div>
+                  <div className="text-gray-400 font-medium">Global Alumni</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-black text-blue-400 mb-2">
+                    <Counter to={350} suffix="+" />
+                  </div>
+                  <div className="text-gray-400 font-medium">Industry Partners</div>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div variants={fadeInUp} className="rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-8 flex items-center justify-center min-h-[300px] relative">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0%,transparent_70%)]" />
+              <Globe className="w-48 h-48 text-blue-500/20 relative z-10" />
+            </motion.div>
+          </motion.div>
+        </section>
 
-          {/* Final CTA (on light) */}
-          <div className="s5-cta-wrapper relative z-10 flex flex-col items-center text-center px-4">
-            <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-black mb-12">
-              Shape the future.
-            </h2>
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Link 
-                to="/admissions" 
-                className="px-10 py-5 rounded-full bg-black text-white font-bold text-xl hover:bg-gray-800 transition-colors flex items-center gap-3"
+        {/* 7. STUDENT COMMUNITY */}
+        <section className="py-24 bg-[#050505] px-6 lg:px-8 border-y border-white/5">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+              className="mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white tracking-tight">Vibrant Student Community</h2>
+              <p className="text-lg text-gray-400 max-w-2xl mx-auto">Life at BMSCE is dynamic and engaging, with numerous opportunities for personal and professional growth outside the classroom.</p>
+            </motion.div>
+
+            <motion.div
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+            >
+              {[
+                { title: "Technical Clubs", desc: "Coding, Robotics, Aero" },
+                { title: "Cultural Forums", desc: "Dance, Music, Theatre" },
+                { title: "Sports Teams", desc: "Cricket, Basketball, Athletics" },
+                { title: "Social Initiatives", desc: "NSS, Rotaract, Outreach" }
+              ].map((club, i) => (
+                <motion.div key={i} variants={fadeInUp} className="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors">
+                  <Users className="w-8 h-8 text-blue-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-bold text-white mb-2">{club.title}</h3>
+                  <p className="text-gray-400 text-sm">{club.desc}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* 8. FINAL CTA */}
+        <section className="py-32 px-6 lg:px-8 bg-blue-900/10 border-t border-blue-500/20 text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0%,transparent_70%)]" />
+          <motion.div
+            className="relative z-10 max-w-3xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-white">Join a legacy of excellence</h2>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/admissions"
+                className="px-8 py-4 rounded-full bg-blue-600 text-white font-bold text-lg hover:bg-blue-500 transition-colors flex items-center justify-center gap-2"
               >
-                Apply Now <ArrowRight size={24} />
+                Apply Now <ArrowRight size={20} />
               </Link>
-              <Link 
-                to="/academics" 
-                className="px-10 py-5 rounded-full bg-transparent text-black font-bold text-xl hover:bg-gray-200 transition-colors border border-black/20"
+              <Link
+                to="/academics"
+                className="px-8 py-4 rounded-full bg-transparent text-white font-bold text-lg hover:bg-white/10 transition-colors border border-white/30 flex items-center justify-center"
               >
                 Explore Academics
               </Link>
             </div>
-          </div>
+          </motion.div>
         </section>
 
       </div>
