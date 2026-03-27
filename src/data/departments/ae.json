@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Prakash Rao",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Aerospace Structures Studies",
+        "experience": "23 Years",
+        "specialization": "Propulsion, Aerodynamics, Flight Mechanics"
+    },
+    {
+        "name": "Dr. Anita Patel",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Aerospace Structures Studies",
+        "experience": "10 Years",
+        "specialization": "Avionics, Aerodynamics"
+    },
+    {
+        "name": "Dr. Rahul Bhat",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Aerospace Structures Studies",
+        "experience": "13 Years",
+        "specialization": "Aerodynamics, Avionics"
+    },
+    {
+        "name": "Dr. Ravi Menon",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Aerospace Structures Studies",
+        "experience": "23 Years",
+        "specialization": "Propulsion, Aerodynamics, Avionics"
+    },
+    {
+        "name": "Dr. Srinivas Bhat",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Aerospace Structures Studies",
+        "experience": "20 Years",
+        "specialization": "Avionics, Computational Fluid Dynamics, Propulsion"
+    },
+    {
+        "name": "Dr. Priya Patil",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Aerospace Structures Studies",
+        "experience": "18 Years",
+        "specialization": "Computational Fluid Dynamics, Avionics"
+    },
+    {
+        "name": "Dr. Anjali Menon",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Aerospace Structures Studies",
+        "experience": "28 Years",
+        "specialization": "Aerospace Structures, Aerodynamics, Avionics"
+    },
+    {
+        "name": "Dr. Amit Rao",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Aerospace Structures Studies",
+        "experience": "11 Years",
+        "specialization": "Aerospace Structures, Aerodynamics"
+    },
+    {
+        "name": "Dr. Swati Sharma",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Aerospace Structures Studies",
+        "experience": "16 Years",
+        "specialization": "Computational Fluid Dynamics, Avionics, Propulsion"
+    },
+    {
+        "name": "Dr. Rajesh Desai",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Aerospace Structures Studies",
+        "experience": "29 Years",
+        "specialization": "Aerospace Structures, Computational Fluid Dynamics, Flight Mechanics"
+    }
+]

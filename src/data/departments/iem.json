@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Suresh Iyer",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Supply Chain Management",
+        "experience": "12 Years",
+        "specialization": "Quality Engineering, Project Management, Operations Research"
+    },
+    {
+        "name": "Dr. Sanjay Hegde",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Supply Chain Management",
+        "experience": "7 Years",
+        "specialization": "Operations Research, Project Management"
+    },
+    {
+        "name": "Dr. Suresh Patel",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Supply Chain Management",
+        "experience": "19 Years",
+        "specialization": "Quality Engineering, Operations Research"
+    },
+    {
+        "name": "Dr. Swati Gupta",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Supply Chain Management",
+        "experience": "21 Years",
+        "specialization": "Quality Engineering, Supply Chain Management, Optimization Techniques"
+    },
+    {
+        "name": "Dr. Deepak Rao",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Supply Chain Management",
+        "experience": "9 Years",
+        "specialization": "Quality Engineering, Operations Research, Industrial Ergonomics"
+    },
+    {
+        "name": "Dr. Sunil Joshi",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Supply Chain Management",
+        "experience": "13 Years",
+        "specialization": "Project Management, Quality Engineering, Industrial Ergonomics"
+    },
+    {
+        "name": "Dr. Vijay Iyer",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Supply Chain Management",
+        "experience": "18 Years",
+        "specialization": "Industrial Ergonomics, Project Management"
+    },
+    {
+        "name": "Dr. Deepak Reddy",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Supply Chain Management",
+        "experience": "13 Years",
+        "specialization": "Operations Research, Project Management, Optimization Techniques"
+    },
+    {
+        "name": "Dr. Amit Singh",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Supply Chain Management",
+        "experience": "23 Years",
+        "specialization": "Quality Engineering, Supply Chain Management, Optimization Techniques"
+    },
+    {
+        "name": "Dr. Swati Desai",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Supply Chain Management",
+        "experience": "12 Years",
+        "specialization": "Supply Chain Management, Quality Engineering, Optimization Techniques"
+    }
+]

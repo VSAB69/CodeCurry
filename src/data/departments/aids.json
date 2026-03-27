@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Lakshmi Shetty",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Reinforcement Learning",
+        "experience": "8 Years",
+        "specialization": "Computer Vision, Deep Learning, Natural Language Processing"
+    },
+    {
+        "name": "Dr. Mahesh Gowda",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Reinforcement Learning",
+        "experience": "27 Years",
+        "specialization": "Natural Language Processing, Machine Learning"
+    },
+    {
+        "name": "Dr. Swati Kulkarni",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Reinforcement Learning",
+        "experience": "10 Years",
+        "specialization": "Reinforcement Learning, Machine Learning"
+    },
+    {
+        "name": "Dr. Anjali Iyer",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Reinforcement Learning",
+        "experience": "19 Years",
+        "specialization": "Reinforcement Learning, Machine Learning"
+    },
+    {
+        "name": "Dr. Rahul Desai",
+        "designation": "Professor",
+        "qualification": "M.Tech in Reinforcement Learning",
+        "experience": "15 Years",
+        "specialization": "Machine Learning, Reinforcement Learning"
+    },
+    {
+        "name": "Dr. Anita Kulkarni",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Reinforcement Learning",
+        "experience": "10 Years",
+        "specialization": "Reinforcement Learning, Natural Language Processing, Machine Learning"
+    },
+    {
+        "name": "Dr. Ravi Reddy",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Reinforcement Learning",
+        "experience": "13 Years",
+        "specialization": "Natural Language Processing, Machine Learning, Deep Learning"
+    },
+    {
+        "name": "Dr. Mahesh Kumar",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Reinforcement Learning",
+        "experience": "27 Years",
+        "specialization": "Deep Learning, Computer Vision, Data Analytics"
+    },
+    {
+        "name": "Dr. Amit Menon",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Reinforcement Learning",
+        "experience": "12 Years",
+        "specialization": "Deep Learning, Machine Learning"
+    },
+    {
+        "name": "Dr. Sunil Gowda",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Reinforcement Learning",
+        "experience": "27 Years",
+        "specialization": "Reinforcement Learning, Machine Learning"
+    }
+]

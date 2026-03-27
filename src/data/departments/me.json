@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Bheemsha Arya",
+        "designation": "Professor & Principal",
+        "qualification": "Ph.D. in Mechanical Engineering",
+        "experience": "25 Years",
+        "specialization": "Thermoacoustics, Heat Transfer Enhancement, Heat Exchangers, Composite Materials"
+    },
+    {
+        "name": "Dr. L. Ravikumar",
+        "designation": "Professor & Vice Principal",
+        "qualification": "Ph.D. in Structural Engineering",
+        "experience": "24 Years",
+        "specialization": "Structural Dynamics, Rotor Dynamics, Stress Analysis, Vibration Control"
+    },
+    {
+        "name": "Dr. G. Saravanakumar",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Mechanical Vibrations",
+        "experience": "22 Years",
+        "specialization": "Rotor Dynamics, Vibro-Acoustics, Magneto-Rheological Fluids, Microfluidics"
+    },
+    {
+        "name": "Dr. Giridhara G",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Advanced Materials",
+        "experience": "21 Years",
+        "specialization": "Structural Dynamics, Health Monitoring, Advanced Materials, Finite Element Methods"
+    },
+    {
+        "name": "Dr. J Sharana Basavaraja",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Machine Design",
+        "experience": "23 Years",
+        "specialization": "Tribology, Smart Materials, CAD/CAM, Vibrations, Composite Materials"
+    },
+    {
+        "name": "Dr. Mahadevgouda Patil",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Manufacturing Engineering",
+        "experience": "20 Years",
+        "specialization": "Powder Metallurgy, Non-Conventional Machining"
+    },
+    {
+        "name": "Dr. R. N. Ravikumar",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Mechanical Systems",
+        "experience": "22 Years",
+        "specialization": "Foil Bearings, Vibrations, Condition Monitoring"
+    },
+    {
+        "name": "Dr. Rudra Naik",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "19 Years",
+        "specialization": "Thermal Management, Heat Pipes, Battery Cooling, Advanced Materials, Optimization"
+    },
+    {
+        "name": "Dr. V. Bharathi",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Mechatronics",
+        "experience": "21 Years",
+        "specialization": "Materials Engineering, Mathematical Modeling, Mechatronics"
+    },
+    {
+        "name": "Dr. Vardhaman S M",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Materials Engineering",
+        "experience": "18 Years",
+        "specialization": "Grain Refinement, Metal Matrix Composites, Design of Experiments"
+    }
+]

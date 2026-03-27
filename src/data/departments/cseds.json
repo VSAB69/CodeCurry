@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Rajesh Hegde",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Database Systems Studies",
+        "experience": "8 Years",
+        "specialization": "Statistical Modeling, Data Visualization, Predictive Analytics"
+    },
+    {
+        "name": "Dr. Kavita Bhat",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Database Systems Studies",
+        "experience": "26 Years",
+        "specialization": "Big Data, Data Visualization, Cloud Data Warehousing"
+    },
+    {
+        "name": "Dr. Sanjay Joshi",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Database Systems Studies",
+        "experience": "23 Years",
+        "specialization": "Cloud Data Warehousing, Database Systems, Big Data"
+    },
+    {
+        "name": "Dr. Kavita Menon",
+        "designation": "Professor",
+        "qualification": "M.Tech in Database Systems Studies",
+        "experience": "30 Years",
+        "specialization": "Statistical Modeling, Cloud Data Warehousing"
+    },
+    {
+        "name": "Dr. Arvind Patel",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Database Systems Studies",
+        "experience": "8 Years",
+        "specialization": "Data Visualization, Database Systems, Statistical Modeling"
+    },
+    {
+        "name": "Dr. Mahesh Joshi",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Database Systems Studies",
+        "experience": "15 Years",
+        "specialization": "Big Data, Statistical Modeling, Data Visualization"
+    },
+    {
+        "name": "Dr. Deepak Rao",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Database Systems Studies",
+        "experience": "19 Years",
+        "specialization": "Statistical Modeling, Predictive Analytics"
+    },
+    {
+        "name": "Dr. Neha Hegde",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Database Systems Studies",
+        "experience": "8 Years",
+        "specialization": "Database Systems, Statistical Modeling, Data Visualization"
+    },
+    {
+        "name": "Dr. Ravi Rao",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Database Systems Studies",
+        "experience": "16 Years",
+        "specialization": "Predictive Analytics, Big Data, Cloud Data Warehousing"
+    },
+    {
+        "name": "Dr. Deepak Singh",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Database Systems Studies",
+        "experience": "27 Years",
+        "specialization": "Database Systems, Big Data, Data Visualization"
+    }
+]

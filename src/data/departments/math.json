@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Anil Singh",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Differential Equations Studies",
+        "experience": "25 Years",
+        "specialization": "Applied Mathematics, Differential Equations, Numerical Methods"
+    },
+    {
+        "name": "Dr. Sanjay Sharma",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Differential Equations Studies",
+        "experience": "30 Years",
+        "specialization": "Differential Equations, Applied Mathematics, Real Analysis"
+    },
+    {
+        "name": "Dr. Kiran Kulkarni",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Differential Equations Studies",
+        "experience": "12 Years",
+        "specialization": "Differential Equations, Linear Algebra"
+    },
+    {
+        "name": "Dr. Rajesh Nair",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Differential Equations Studies",
+        "experience": "29 Years",
+        "specialization": "Real Analysis, Numerical Methods"
+    },
+    {
+        "name": "Dr. Suresh Joshi",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Differential Equations Studies",
+        "experience": "20 Years",
+        "specialization": "Applied Mathematics, Linear Algebra"
+    },
+    {
+        "name": "Dr. Rajesh Desai",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Differential Equations Studies",
+        "experience": "30 Years",
+        "specialization": "Applied Mathematics, Differential Equations, Numerical Methods"
+    },
+    {
+        "name": "Dr. Anil Patil",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Differential Equations Studies",
+        "experience": "28 Years",
+        "specialization": "Differential Equations, Linear Algebra, Applied Mathematics"
+    },
+    {
+        "name": "Dr. Anjali Sharma",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Differential Equations Studies",
+        "experience": "13 Years",
+        "specialization": "Applied Mathematics, Linear Algebra, Numerical Methods"
+    },
+    {
+        "name": "Dr. Lakshmi Sharma",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Differential Equations Studies",
+        "experience": "21 Years",
+        "specialization": "Discrete Mathematics, Applied Mathematics, Linear Algebra"
+    },
+    {
+        "name": "Dr. Lakshmi Singh",
+        "designation": "Professor",
+        "qualification": "M.Tech in Differential Equations Studies",
+        "experience": "16 Years",
+        "specialization": "Differential Equations, Linear Algebra, Numerical Methods"
+    }
+]

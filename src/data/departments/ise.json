@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Dr. M K Nalini",
+        "designation": "Associate Professor & HOD",
+        "qualification": "Ph.D. in Computer Science",
+        "experience": "18 Years",
+        "specialization": "Biometrics and Cryptography"
+    },
+    {
+        "name": "Dr. Shubha Rao V",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Electronics and Communication",
+        "experience": "20+ Years",
+        "specialization": "Sensor Networks, Internet of Things"
+    },
+    {
+        "name": "Dr. Nalina V",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Computer Networks",
+        "experience": "15 Years",
+        "specialization": "Computer Networks, Vehicular Adhoc Networks, Cloud Computing, IoT"
+    },
+    {
+        "name": "Dr. Preetha S",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Wireless Sensor Networks",
+        "experience": "14 Years",
+        "specialization": "Biometrics for Wireless Sensor Networks"
+    },
+    {
+        "name": "Dr. Roopa R",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Data Science",
+        "experience": "13 Years",
+        "specialization": "Data Science, Big Data Analytics, IoT, Wireless Communication"
+    },
+    {
+        "name": "Harini S",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Computer Science",
+        "experience": "8 Years",
+        "specialization": "Image Processing, Machine Learning, High Performance Computing"
+    },
+    {
+        "name": "Rashmi R",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Artificial Intelligence",
+        "experience": "7 Years",
+        "specialization": "Machine Learning, Deep Learning"
+    },
+    {
+        "name": "Shobana T S",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Computer Science",
+        "experience": "7 Years",
+        "specialization": "Machine Learning, Deep Learning"
+    }
+]

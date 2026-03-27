@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Pooja Reddy",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Process Control Studies",
+        "experience": "30 Years",
+        "specialization": "Polymer Engineering, Process Control, Thermodynamics"
+    },
+    {
+        "name": "Dr. Priya Gowda",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Process Control Studies",
+        "experience": "11 Years",
+        "specialization": "Transport Phenomena, Material Science"
+    },
+    {
+        "name": "Dr. Anjali Nair",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Process Control Studies",
+        "experience": "14 Years",
+        "specialization": "Polymer Engineering, Transport Phenomena"
+    },
+    {
+        "name": "Dr. Ramesh Gupta",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Process Control Studies",
+        "experience": "21 Years",
+        "specialization": "Material Science, Transport Phenomena, Thermodynamics"
+    },
+    {
+        "name": "Dr. Prakash Nath",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Process Control Studies",
+        "experience": "28 Years",
+        "specialization": "Material Science, Polymer Engineering, Thermodynamics"
+    },
+    {
+        "name": "Dr. Swati Nath",
+        "designation": "Professor",
+        "qualification": "M.Tech in Process Control Studies",
+        "experience": "15 Years",
+        "specialization": "Chemical Kinetics, Material Science"
+    },
+    {
+        "name": "Dr. Rajesh Verma",
+        "designation": "Professor",
+        "qualification": "M.Tech in Process Control Studies",
+        "experience": "25 Years",
+        "specialization": "Chemical Kinetics, Material Science, Polymer Engineering"
+    },
+    {
+        "name": "Dr. Sunil Reddy",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Process Control Studies",
+        "experience": "20 Years",
+        "specialization": "Chemical Kinetics, Material Science, Thermodynamics"
+    },
+    {
+        "name": "Dr. Anita Rao",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Process Control Studies",
+        "experience": "10 Years",
+        "specialization": "Process Control, Chemical Kinetics, Material Science"
+    },
+    {
+        "name": "Dr. Deepak Patil",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Process Control Studies",
+        "experience": "28 Years",
+        "specialization": "Process Control, Chemical Kinetics"
+    }
+]

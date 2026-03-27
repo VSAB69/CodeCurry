@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Dr. Indiramma M",
+        "designation": "Professor & HOD",
+        "qualification": "Ph.D. in Computer Science",
+        "experience": "22 Years",
+        "specialization": "Artificial Intelligence, Cloud Computing, Big Data Analytics, Data Mining, Data Science"
+    },
+    {
+        "name": "Dr. Lakshmi Shree K",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Data Science",
+        "experience": "10 Years",
+        "specialization": "Social Networks, Data Science, Machine Learning Design and Modeling"
+    },
+    {
+        "name": "Hitha S",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Computer Science",
+        "experience": "7 Years",
+        "specialization": "Artificial Intelligence & Machine Learning, Data Science & Analytics, Computer Networks, Network Security"
+    },
+    {
+        "name": "P Suresh Babu",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Artificial Intelligence",
+        "experience": "8 Years",
+        "specialization": "Artificial Intelligence and Machine Learning"
+    },
+    {
+        "name": "Pramoda R",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Data Science",
+        "experience": "6 Years",
+        "specialization": "Artificial Intelligence, Machine Learning, Data Science"
+    },
+    {
+        "name": "Sangeetha S",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Information Technology",
+        "experience": "9 Years",
+        "specialization": "Networking, Artificial Intelligence, Internet of Things"
+    },
+    {
+        "name": "Shruthi K R",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Wireless Communication",
+        "experience": "7 Years",
+        "specialization": "Wireless Sensor Networks, Artificial Intelligence, Machine Learning"
+    },
+    {
+        "name": "Suman M",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Cyber Security",
+        "experience": "8 Years",
+        "specialization": "Artificial Intelligence, Cyber Security"
+    }
+]

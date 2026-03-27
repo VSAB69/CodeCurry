@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Anita Gowda",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Plasma Physics",
+        "experience": "12 Years",
+        "specialization": "Condensed Matter Physics, Solid State Physics"
+    },
+    {
+        "name": "Dr. Lakshmi Singh",
+        "designation": "Professor",
+        "qualification": "M.Tech in Plasma Physics",
+        "experience": "25 Years",
+        "specialization": "Nuclear Physics, Condensed Matter Physics"
+    },
+    {
+        "name": "Dr. Vijay Iyer",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Plasma Physics",
+        "experience": "12 Years",
+        "specialization": "Optics, Condensed Matter Physics"
+    },
+    {
+        "name": "Dr. Pradeep Rao",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Plasma Physics",
+        "experience": "16 Years",
+        "specialization": "Condensed Matter Physics, Optics, Nuclear Physics"
+    },
+    {
+        "name": "Dr. Neha Menon",
+        "designation": "Professor",
+        "qualification": "M.Tech in Plasma Physics",
+        "experience": "25 Years",
+        "specialization": "Condensed Matter Physics, Plasma Physics"
+    },
+    {
+        "name": "Dr. Suresh Joshi",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Plasma Physics",
+        "experience": "20 Years",
+        "specialization": "Optics, Plasma Physics, Nuclear Physics"
+    },
+    {
+        "name": "Dr. Anil Nair",
+        "designation": "Professor",
+        "qualification": "M.Tech in Plasma Physics",
+        "experience": "22 Years",
+        "specialization": "Optics, Quantum Mechanics, Condensed Matter Physics"
+    },
+    {
+        "name": "Dr. Ravi Bhat",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Plasma Physics",
+        "experience": "14 Years",
+        "specialization": "Condensed Matter Physics, Solid State Physics"
+    },
+    {
+        "name": "Dr. Prakash Reddy",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Plasma Physics",
+        "experience": "20 Years",
+        "specialization": "Optics, Solid State Physics"
+    },
+    {
+        "name": "Dr. Kiran Kulkarni",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Plasma Physics",
+        "experience": "30 Years",
+        "specialization": "Plasma Physics, Solid State Physics, Quantum Mechanics"
+    }
+]

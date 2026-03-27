@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Rajesh Sharma",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Genetic Engineering",
+        "experience": "13 Years",
+        "specialization": "Immunology, Molecular Biology"
+    },
+    {
+        "name": "Dr. Priya Bhat",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Genetic Engineering",
+        "experience": "12 Years",
+        "specialization": "Molecular Biology, Immunology"
+    },
+    {
+        "name": "Dr. Rajesh Hegde",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Genetic Engineering",
+        "experience": "22 Years",
+        "specialization": "Molecular Biology, Bioprocess Engineering"
+    },
+    {
+        "name": "Dr. Amit Reddy",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Genetic Engineering",
+        "experience": "16 Years",
+        "specialization": "Molecular Biology, Bioprocess Engineering"
+    },
+    {
+        "name": "Dr. Anita Nath",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Genetic Engineering",
+        "experience": "12 Years",
+        "specialization": "Immunology, Bioinformatics, Molecular Biology"
+    },
+    {
+        "name": "Dr. Lakshmi Shetty",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Genetic Engineering",
+        "experience": "11 Years",
+        "specialization": "Bioinformatics, Immunology"
+    },
+    {
+        "name": "Dr. Deepak Iyer",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Genetic Engineering",
+        "experience": "15 Years",
+        "specialization": "Immunology, Bioinformatics"
+    },
+    {
+        "name": "Dr. Rahul Nair",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Genetic Engineering",
+        "experience": "17 Years",
+        "specialization": "Bioinformatics, Genetic Engineering"
+    },
+    {
+        "name": "Dr. Lakshmi Kumar",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Genetic Engineering",
+        "experience": "29 Years",
+        "specialization": "Immunology, Bioinformatics, Genetic Engineering"
+    },
+    {
+        "name": "Dr. Kavita Singh",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Genetic Engineering",
+        "experience": "21 Years",
+        "specialization": "Genetic Engineering, Microbiology"
+    }
+]

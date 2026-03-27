@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Seshachalam D",
+        "designation": "Professor & Vice Principal",
+        "qualification": "Ph.D. in Power Electronics",
+        "experience": "25 Years",
+        "specialization": "Model Order Reduction, Power Electronics, Non-Linear Control Engineering, Battery Management Systems"
+    },
+    {
+        "name": "Dr. K.P. Lakshmi",
+        "designation": "Professor & HOD",
+        "qualification": "Ph.D. in Embedded Systems",
+        "experience": "22 Years",
+        "specialization": "Materials for Sensing Applications, Embedded Systems, Engineering Education"
+    },
+    {
+        "name": "Dr. Akhila S",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Wireless Communications",
+        "experience": "20 Years",
+        "specialization": "Wireless & Mobile Communication, Network Security, Optical Networks, Wireless Sensor Networks"
+    },
+    {
+        "name": "Dr. Beena Ullala Mata B N",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Biomedical Engineering",
+        "experience": "21 Years",
+        "specialization": "Signal & Image Processing, Medical Imaging, Biomedical Instrumentation, IoT Healthcare Devices"
+    },
+    {
+        "name": "Dr. Geetishree Mishra",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Artificial Intelligence",
+        "experience": "18 Years",
+        "specialization": "Artificial Intelligence, Deep Learning, Embedded Systems Design, Real-Time OS"
+    },
+    {
+        "name": "Dr. H. N. Suma",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Neural Networks",
+        "experience": "23 Years",
+        "specialization": "Pattern Recognition, Brain Mapping, Neural Networks, Expert Systems"
+    },
+    {
+        "name": "Dr. Joshi Manisha S",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Medical Imaging",
+        "experience": "19 Years",
+        "specialization": "Medical Image Processing, Biomedical Instrumentation, Embedded Systems, Machine Learning"
+    },
+    {
+        "name": "Dr. M.S. Suma",
+        "designation": "Professor",
+        "qualification": "Ph.D. in VLSI Design",
+        "experience": "21 Years",
+        "specialization": "VLSI Design, Microelectronics, Biomedical Circuits, SoC for Biomedical Applications"
+    },
+    {
+        "name": "Dr. Mamatha M.N.",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Biomedical Engineering",
+        "experience": "17 Years",
+        "specialization": "Biomedical Data Acquisition, Signal Processing, Healthcare Systems"
+    },
+    {
+        "name": "Dr. Poornima G",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Computer Networks",
+        "experience": "20 Years",
+        "specialization": "Energy Efficient Networks, Fault Tolerant Signal Processing, Wireless Sensor Networks"
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Anjali Desai",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Information Systems Studies",
+        "experience": "14 Years",
+        "specialization": "Operations Management, Financial Management"
+    },
+    {
+        "name": "Dr. Vijay Rao",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Information Systems Studies",
+        "experience": "30 Years",
+        "specialization": "Data Analytics for Business, Financial Management"
+    },
+    {
+        "name": "Dr. Deepak Gupta",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Information Systems Studies",
+        "experience": "14 Years",
+        "specialization": "Data Analytics for Business, Enterprise Architecture, Financial Management"
+    },
+    {
+        "name": "Dr. Priya Shetty",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Information Systems Studies",
+        "experience": "21 Years",
+        "specialization": "Operations Management, Business Strategy, Enterprise Architecture"
+    },
+    {
+        "name": "Dr. Anjali Gupta",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Information Systems Studies",
+        "experience": "10 Years",
+        "specialization": "Business Strategy, Financial Management, Information Systems"
+    },
+    {
+        "name": "Dr. Mahesh Gupta",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Information Systems Studies",
+        "experience": "21 Years",
+        "specialization": "Business Strategy, Financial Management"
+    },
+    {
+        "name": "Dr. Kavita Gowda",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Information Systems Studies",
+        "experience": "26 Years",
+        "specialization": "Financial Management, Data Analytics for Business"
+    },
+    {
+        "name": "Dr. Lakshmi Gowda",
+        "designation": "Professor",
+        "qualification": "M.Tech in Information Systems Studies",
+        "experience": "8 Years",
+        "specialization": "Data Analytics for Business, Financial Management, Information Systems"
+    },
+    {
+        "name": "Dr. Anjali Singh",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Information Systems Studies",
+        "experience": "19 Years",
+        "specialization": "Financial Management, Information Systems"
+    },
+    {
+        "name": "Dr. Pradeep Reddy",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Information Systems Studies",
+        "experience": "25 Years",
+        "specialization": "Information Systems, Financial Management, Data Analytics for Business"
+    }
+]

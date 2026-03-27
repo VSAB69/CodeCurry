@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Kavitha Sooda",
+        "designation": "Professor & HOD",
+        "qualification": "Ph.D. in Computer Science",
+        "experience": "20+ Years",
+        "specialization": "Data Analytics, Network Virtualization, Natural Language Processing"
+    },
+    {
+        "name": "Dr. HS Guruprasad",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Computer Networks",
+        "experience": "18 Years",
+        "specialization": "Networks & Communications, Cloud Computing, Algorithms"
+    },
+    {
+        "name": "Dr. Asha GR",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Artificial Intelligence",
+        "experience": "16 Years",
+        "specialization": "Artificial Intelligence, Machine Learning, Blockchain, Wireless Sensor Networks"
+    },
+    {
+        "name": "Dr. G Varaprasad",
+        "designation": "Professor (On Lien as Director, NBA)",
+        "qualification": "Ph.D. in Wireless Networks",
+        "experience": "22 Years",
+        "specialization": "Mobile Ad hoc Networks, Vehicular Networks, Wireless Sensor Networks"
+    },
+    {
+        "name": "Dr. Jyothi S Nayak",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Computer Vision",
+        "experience": "14 Years",
+        "specialization": "Machine Learning, Computer Vision, Artificial Intelligence"
+    },
+    {
+        "name": "Dr. Kayarvizhy N",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Information Technology",
+        "experience": "12 Years",
+        "specialization": "Distributed Systems, Data Mining, Software Engineering"
+    },
+    {
+        "name": "Dr. Latha NLR",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Computer Architecture",
+        "experience": "17 Years",
+        "specialization": "Parallel Architecture, Big Data Analytics, Cloud Computing, AI & ML"
+    },
+    {
+        "name": "Dr. MV Sudhamani",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Computer Science",
+        "experience": "19 Years",
+        "specialization": "Image Processing, Machine Learning, Blockchain Technology"
+    },
+    {
+        "name": "Dr. P Jayarekha",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Computer Networks",
+        "experience": "15 Years",
+        "specialization": "Computer Communications, Algorithms, Cloud Computing"
+    },
+    {
+        "name": "Dr. Pallavi G B",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Data Science",
+        "experience": "13 Years",
+        "specialization": "Cloud Computing, Big Data, Data Analytics"
+    }
+]

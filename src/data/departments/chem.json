@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Mahesh Kulkarni",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Organic Chemistry",
+        "experience": "15 Years",
+        "specialization": "Inorganic Chemistry, Organic Chemistry"
+    },
+    {
+        "name": "Dr. Ravi Desai",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Organic Chemistry",
+        "experience": "13 Years",
+        "specialization": "Nanochemistry, Organic Chemistry"
+    },
+    {
+        "name": "Dr. Swati Nair",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Organic Chemistry",
+        "experience": "21 Years",
+        "specialization": "Nanochemistry, Physical Chemistry"
+    },
+    {
+        "name": "Dr. Srinivas Rao",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Organic Chemistry",
+        "experience": "10 Years",
+        "specialization": "Physical Chemistry, Inorganic Chemistry"
+    },
+    {
+        "name": "Dr. Rahul Gowda",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Organic Chemistry",
+        "experience": "10 Years",
+        "specialization": "Polymer Chemistry, Organic Chemistry"
+    },
+    {
+        "name": "Dr. Vijay Patil",
+        "designation": "Professor",
+        "qualification": "M.Tech in Organic Chemistry",
+        "experience": "21 Years",
+        "specialization": "Organic Chemistry, Physical Chemistry, Analytical Chemistry"
+    },
+    {
+        "name": "Dr. Vijay Nair",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Organic Chemistry",
+        "experience": "8 Years",
+        "specialization": "Inorganic Chemistry, Physical Chemistry, Analytical Chemistry"
+    },
+    {
+        "name": "Dr. Rajesh Patel",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Organic Chemistry",
+        "experience": "23 Years",
+        "specialization": "Nanochemistry, Analytical Chemistry, Inorganic Chemistry"
+    },
+    {
+        "name": "Dr. Lakshmi Patil",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Organic Chemistry",
+        "experience": "26 Years",
+        "specialization": "Nanochemistry, Analytical Chemistry, Organic Chemistry"
+    },
+    {
+        "name": "Dr. Amit Nair",
+        "designation": "Professor",
+        "qualification": "M.Tech in Organic Chemistry",
+        "experience": "9 Years",
+        "specialization": "Organic Chemistry, Physical Chemistry"
+    }
+]

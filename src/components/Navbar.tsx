@@ -58,12 +58,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden md:block">
-          <Link
-            to="/admissions"
-            className="px-6 py-2.5 bg-white text-black text-sm font-semibold rounded-full hover:scale-105 transition-transform"
-          >
-            Apply Now
-          </Link>
+
         </div>
       </div>
     </header>

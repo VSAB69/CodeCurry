@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Neha Gowda",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Operations Management",
+        "experience": "25 Years",
+        "specialization": "Operations Management, Human Resource Management"
+    },
+    {
+        "name": "Dr. Anil Kulkarni",
+        "designation": "Professor",
+        "qualification": "MBA in Operations Management",
+        "experience": "20 Years",
+        "specialization": "Operations Management, Organizational Behavior"
+    },
+    {
+        "name": "Dr. Anil Singh",
+        "designation": "Assistant Professor",
+        "qualification": "MBA in Operations Management",
+        "experience": "30 Years",
+        "specialization": "Operations Management, Finance"
+    },
+    {
+        "name": "Dr. Sunil Nath",
+        "designation": "Assistant Professor",
+        "qualification": "MBA in Operations Management",
+        "experience": "29 Years",
+        "specialization": "Organizational Behavior, Operations Management, Finance"
+    },
+    {
+        "name": "Dr. Rajesh Singh",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Operations Management",
+        "experience": "28 Years",
+        "specialization": "Organizational Behavior, Marketing Management"
+    },
+    {
+        "name": "Dr. Anjali Iyer",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Operations Management",
+        "experience": "22 Years",
+        "specialization": "Human Resource Management, Operations Management"
+    },
+    {
+        "name": "Dr. Sanjay Joshi",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Operations Management",
+        "experience": "17 Years",
+        "specialization": "Organizational Behavior, Marketing Management, Human Resource Management"
+    },
+    {
+        "name": "Dr. Ramesh Gupta",
+        "designation": "Associate Professor",
+        "qualification": "MBA in Operations Management",
+        "experience": "26 Years",
+        "specialization": "Marketing Management, Strategic Management"
+    },
+    {
+        "name": "Dr. Deepak Desai",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Operations Management",
+        "experience": "9 Years",
+        "specialization": "Marketing Management, Operations Management, Strategic Management"
+    },
+    {
+        "name": "Dr. Priya Singh",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Operations Management",
+        "experience": "24 Years",
+        "specialization": "Operations Management, Organizational Behavior, Marketing Management"
+    }
+]

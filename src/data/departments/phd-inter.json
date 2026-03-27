@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Deepak Nair",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Bio-inspired Robotics Studies",
+        "experience": "26 Years",
+        "specialization": "Quantum Computing, Bio-inspired Robotics"
+    },
+    {
+        "name": "Dr. Lakshmi Singh",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Bio-inspired Robotics Studies",
+        "experience": "30 Years",
+        "specialization": "Systems Biology, Quantum Computing, Mechatronics"
+    },
+    {
+        "name": "Dr. Kavita Verma",
+        "designation": "Professor",
+        "qualification": "M.Tech in Bio-inspired Robotics Studies",
+        "experience": "22 Years",
+        "specialization": "Systems Biology, Bio-inspired Robotics, Human-Computer Interaction"
+    },
+    {
+        "name": "Dr. Amit Rao",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Bio-inspired Robotics Studies",
+        "experience": "18 Years",
+        "specialization": "Computational Materials Science, Mechatronics"
+    },
+    {
+        "name": "Dr. Sunil Patil",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Bio-inspired Robotics Studies",
+        "experience": "10 Years",
+        "specialization": "Systems Biology, Computational Materials Science, Mechatronics"
+    },
+    {
+        "name": "Dr. Anita Menon",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Bio-inspired Robotics Studies",
+        "experience": "7 Years",
+        "specialization": "Bio-inspired Robotics, Systems Biology, Quantum Computing"
+    },
+    {
+        "name": "Dr. Lakshmi Kumar",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Bio-inspired Robotics Studies",
+        "experience": "23 Years",
+        "specialization": "Bio-inspired Robotics, Quantum Computing"
+    },
+    {
+        "name": "Dr. Rajesh Nath",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Bio-inspired Robotics Studies",
+        "experience": "27 Years",
+        "specialization": "Human-Computer Interaction, Computational Materials Science"
+    },
+    {
+        "name": "Dr. Ravi Singh",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Bio-inspired Robotics Studies",
+        "experience": "14 Years",
+        "specialization": "Mechatronics, Human-Computer Interaction, Bio-inspired Robotics"
+    },
+    {
+        "name": "Dr. Anil Joshi",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Bio-inspired Robotics Studies",
+        "experience": "10 Years",
+        "specialization": "Bio-inspired Robotics, Mechatronics, Systems Biology"
+    }
+]

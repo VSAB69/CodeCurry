@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Rajesh Menon",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Application Development Studies",
+        "experience": "30 Years",
+        "specialization": "Software Engineering, Cloud Applications"
+    },
+    {
+        "name": "Dr. Lakshmi Rao",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Application Development Studies",
+        "experience": "12 Years",
+        "specialization": "Web Technologies, Cloud Applications"
+    },
+    {
+        "name": "Dr. Kavita Kumar",
+        "designation": "Professor",
+        "qualification": "M.Tech in Application Development Studies",
+        "experience": "12 Years",
+        "specialization": "Software Engineering, Mobile App Development, Application Development"
+    },
+    {
+        "name": "Dr. Ramesh Nath",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Application Development Studies",
+        "experience": "15 Years",
+        "specialization": "Software Engineering, Database Administration"
+    },
+    {
+        "name": "Dr. Rahul Kulkarni",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Application Development Studies",
+        "experience": "10 Years",
+        "specialization": "Cloud Applications, Mobile App Development"
+    },
+    {
+        "name": "Dr. Mahesh Shetty",
+        "designation": "Professor",
+        "qualification": "M.Tech in Application Development Studies",
+        "experience": "14 Years",
+        "specialization": "Application Development, Mobile App Development, Cloud Applications"
+    },
+    {
+        "name": "Dr. Srinivas Reddy",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Application Development Studies",
+        "experience": "17 Years",
+        "specialization": "Cloud Applications, Software Engineering, Database Administration"
+    },
+    {
+        "name": "Dr. Suresh Nath",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Application Development Studies",
+        "experience": "16 Years",
+        "specialization": "Application Development, Software Engineering, Mobile App Development"
+    },
+    {
+        "name": "Dr. Sanjay Bhat",
+        "designation": "Professor",
+        "qualification": "M.Tech in Application Development Studies",
+        "experience": "14 Years",
+        "specialization": "Database Administration, Software Engineering, Web Technologies"
+    },
+    {
+        "name": "Dr. Ravi Gowda",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Application Development Studies",
+        "experience": "18 Years",
+        "specialization": "Application Development, Web Technologies"
+    }
+]

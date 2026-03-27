@@ -78,7 +78,17 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-20 text-center px-4 max-w-5xl mx-auto mt-20">
         <div className="mb-6 inline-block">
-          <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-sm font-medium tracking-wider text-blue-400 uppercase">
+          <span className="
+  px-5 py-2 
+  rounded-full 
+  border border-white/10 
+  bg-white/5 backdrop-blur-md 
+  text-sm md:text-base lg:text-lg   /* 👈 bigger text */
+  font-semibold 
+  tracking-wider 
+  text-blue-400 
+  uppercase
+">
             B.M.S. College of Engineering
           </span>
         </div>

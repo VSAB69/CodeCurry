@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Priya Verma",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in VLSI Design Studies",
+        "experience": "16 Years",
+        "specialization": "Quantum Communications, VLSI Design"
+    },
+    {
+        "name": "Dr. Kavita Singh",
+        "designation": "Professor",
+        "qualification": "Ph.D. in VLSI Design Studies",
+        "experience": "27 Years",
+        "specialization": "Quantum Communications, VLSI Design, RF Circuit Design"
+    },
+    {
+        "name": "Dr. Rahul Nath",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in VLSI Design Studies",
+        "experience": "20 Years",
+        "specialization": "Quantum Communications, Nanoelectronics, MEMS"
+    },
+    {
+        "name": "Dr. Sanjay Kumar",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in VLSI Design Studies",
+        "experience": "30 Years",
+        "specialization": "Photonics, Quantum Communications"
+    },
+    {
+        "name": "Dr. Mahesh Patil",
+        "designation": "Professor",
+        "qualification": "M.Tech in VLSI Design Studies",
+        "experience": "19 Years",
+        "specialization": "Quantum Communications, Nanoelectronics"
+    },
+    {
+        "name": "Dr. Suresh Kumar",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in VLSI Design Studies",
+        "experience": "21 Years",
+        "specialization": "Photonics, VLSI Design"
+    },
+    {
+        "name": "Dr. Ramesh Patil",
+        "designation": "Professor",
+        "qualification": "M.Tech in VLSI Design Studies",
+        "experience": "11 Years",
+        "specialization": "VLSI Design, Nanoelectronics, Photonics"
+    },
+    {
+        "name": "Dr. Anil Sharma",
+        "designation": "Professor",
+        "qualification": "Ph.D. in VLSI Design Studies",
+        "experience": "24 Years",
+        "specialization": "Quantum Communications, Nanoelectronics, RF Circuit Design"
+    },
+    {
+        "name": "Dr. Lakshmi Sharma",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in VLSI Design Studies",
+        "experience": "23 Years",
+        "specialization": "MEMS, Nanoelectronics, VLSI Design"
+    },
+    {
+        "name": "Dr. Pooja Shetty",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in VLSI Design Studies",
+        "experience": "21 Years",
+        "specialization": "VLSI Design, Nanoelectronics"
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Mahesh Nair",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in High Performance Computing",
+        "experience": "22 Years",
+        "specialization": "Advanced Computing, High Performance Computing"
+    },
+    {
+        "name": "Dr. Ravi Reddy",
+        "designation": "Professor",
+        "qualification": "Ph.D. in High Performance Computing",
+        "experience": "8 Years",
+        "specialization": "Software Architecture, High Performance Computing"
+    },
+    {
+        "name": "Dr. Vijay Verma",
+        "designation": "Professor",
+        "qualification": "M.Tech in High Performance Computing",
+        "experience": "21 Years",
+        "specialization": "Advanced Computing, High Performance Computing, Network Security"
+    },
+    {
+        "name": "Dr. Deepak Verma",
+        "designation": "Professor",
+        "qualification": "M.Tech in High Performance Computing",
+        "experience": "30 Years",
+        "specialization": "Distributed Systems, High Performance Computing, Cyber Security"
+    },
+    {
+        "name": "Dr. Suresh Nair",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in High Performance Computing",
+        "experience": "29 Years",
+        "specialization": "Distributed Systems, Network Security, Software Architecture"
+    },
+    {
+        "name": "Dr. Amit Bhat",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in High Performance Computing",
+        "experience": "9 Years",
+        "specialization": "Network Security, Advanced Computing, Distributed Systems"
+    },
+    {
+        "name": "Dr. Pradeep Nath",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in High Performance Computing",
+        "experience": "19 Years",
+        "specialization": "Advanced Computing, Software Architecture"
+    },
+    {
+        "name": "Dr. Rahul Nath",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in High Performance Computing",
+        "experience": "15 Years",
+        "specialization": "Distributed Systems, Advanced Computing"
+    },
+    {
+        "name": "Dr. Arvind Menon",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in High Performance Computing",
+        "experience": "21 Years",
+        "specialization": "Software Architecture, Network Security, Cyber Security"
+    },
+    {
+        "name": "Dr. Suresh Verma",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in High Performance Computing",
+        "experience": "25 Years",
+        "specialization": "High Performance Computing, Software Architecture"
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Anita Gupta",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in AI Ethics Studies",
+        "experience": "30 Years",
+        "specialization": "Explainable AI, Cognitive Computing"
+    },
+    {
+        "name": "Dr. Neha Nath",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in AI Ethics Studies",
+        "experience": "9 Years",
+        "specialization": "Explainable AI, Cognitive Computing"
+    },
+    {
+        "name": "Dr. Lakshmi Verma",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in AI Ethics Studies",
+        "experience": "20 Years",
+        "specialization": "Reinforcement Learning, Explainable AI"
+    },
+    {
+        "name": "Dr. Deepak Iyer",
+        "designation": "Professor",
+        "qualification": "M.Tech in AI Ethics Studies",
+        "experience": "27 Years",
+        "specialization": "Reinforcement Learning, Neural Architectural Search"
+    },
+    {
+        "name": "Dr. Srinivas Rao",
+        "designation": "Professor",
+        "qualification": "M.Tech in AI Ethics Studies",
+        "experience": "27 Years",
+        "specialization": "Artificial General Intelligence, Neural Architectural Search"
+    },
+    {
+        "name": "Dr. Kavita Verma",
+        "designation": "Professor",
+        "qualification": "Ph.D. in AI Ethics Studies",
+        "experience": "28 Years",
+        "specialization": "Cognitive Computing, Artificial General Intelligence"
+    },
+    {
+        "name": "Dr. Srinivas Gupta",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in AI Ethics Studies",
+        "experience": "22 Years",
+        "specialization": "Cognitive Computing, Explainable AI"
+    },
+    {
+        "name": "Dr. Rajesh Bhat",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in AI Ethics Studies",
+        "experience": "26 Years",
+        "specialization": "AI Ethics, Neural Architectural Search, Cognitive Computing"
+    },
+    {
+        "name": "Dr. Rajesh Rao",
+        "designation": "Professor",
+        "qualification": "M.Tech in AI Ethics Studies",
+        "experience": "16 Years",
+        "specialization": "Artificial General Intelligence, Neural Architectural Search, Cognitive Computing"
+    },
+    {
+        "name": "Dr. Amit Shetty",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in AI Ethics Studies",
+        "experience": "29 Years",
+        "specialization": "AI Ethics, Artificial General Intelligence"
+    }
+]

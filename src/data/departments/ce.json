@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Suresh Patel",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Construction Management",
+        "experience": "19 Years",
+        "specialization": "Structural Engineering, Environmental Engineering, Construction Management"
+    },
+    {
+        "name": "Dr. Sunil Reddy",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Construction Management",
+        "experience": "20 Years",
+        "specialization": "Construction Management, Environmental Engineering, Geotechnical Engineering"
+    },
+    {
+        "name": "Dr. Rahul Patil",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Construction Management",
+        "experience": "19 Years",
+        "specialization": "Hydraulics, Construction Management, Environmental Engineering"
+    },
+    {
+        "name": "Dr. Swati Sharma",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Construction Management",
+        "experience": "9 Years",
+        "specialization": "Construction Management, Environmental Engineering"
+    },
+    {
+        "name": "Dr. Pooja Nair",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Construction Management",
+        "experience": "23 Years",
+        "specialization": "Geotechnical Engineering, Structural Engineering"
+    },
+    {
+        "name": "Dr. Srinivas Singh",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Construction Management",
+        "experience": "7 Years",
+        "specialization": "Geotechnical Engineering, Structural Engineering, Environmental Engineering"
+    },
+    {
+        "name": "Dr. Pradeep Rao",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Construction Management",
+        "experience": "29 Years",
+        "specialization": "Transportation Engineering, Geotechnical Engineering"
+    },
+    {
+        "name": "Dr. Pooja Reddy",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Construction Management",
+        "experience": "9 Years",
+        "specialization": "Transportation Engineering, Structural Engineering"
+    },
+    {
+        "name": "Dr. Swati Hegde",
+        "designation": "Professor",
+        "qualification": "M.Tech in Construction Management",
+        "experience": "16 Years",
+        "specialization": "Transportation Engineering, Environmental Engineering, Hydraulics"
+    },
+    {
+        "name": "Dr. Arvind Nair",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Construction Management",
+        "experience": "29 Years",
+        "specialization": "Construction Management, Environmental Engineering, Geotechnical Engineering"
+    }
+]

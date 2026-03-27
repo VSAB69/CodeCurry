@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Pooja Nath",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Power Systems Studies",
+        "experience": "29 Years",
+        "specialization": "Electrical Machines, Power Systems"
+    },
+    {
+        "name": "Dr. Anjali Kulkarni",
+        "designation": "Professor",
+        "qualification": "M.Tech in Power Systems Studies",
+        "experience": "28 Years",
+        "specialization": "Power Systems, Electrical Machines, Microprocessors"
+    },
+    {
+        "name": "Dr. Pooja Singh",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Power Systems Studies",
+        "experience": "22 Years",
+        "specialization": "Control Systems, Power Systems"
+    },
+    {
+        "name": "Dr. Anita Hegde",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Power Systems Studies",
+        "experience": "28 Years",
+        "specialization": "Microprocessors, Electrical Machines, Renewable Energy"
+    },
+    {
+        "name": "Dr. Prakash Menon",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Power Systems Studies",
+        "experience": "25 Years",
+        "specialization": "Microprocessors, Power Systems, Renewable Energy"
+    },
+    {
+        "name": "Dr. Priya Hegde",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Power Systems Studies",
+        "experience": "23 Years",
+        "specialization": "Power Systems, Electrical Machines, Control Systems"
+    },
+    {
+        "name": "Dr. Pradeep Singh",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Power Systems Studies",
+        "experience": "13 Years",
+        "specialization": "Renewable Energy, Microprocessors, High Voltage Engineering"
+    },
+    {
+        "name": "Dr. Swati Patel",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Power Systems Studies",
+        "experience": "28 Years",
+        "specialization": "Renewable Energy, Electrical Machines, Microprocessors"
+    },
+    {
+        "name": "Dr. Rajesh Patil",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Power Systems Studies",
+        "experience": "25 Years",
+        "specialization": "High Voltage Engineering, Renewable Energy"
+    },
+    {
+        "name": "Dr. Amit Nair",
+        "designation": "Professor",
+        "qualification": "M.Tech in Power Systems Studies",
+        "experience": "27 Years",
+        "specialization": "Power Systems, Microprocessors"
+    }
+]

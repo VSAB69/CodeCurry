@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Vijay Iyer",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Spatiotemporal Data Studies",
+        "experience": "28 Years",
+        "specialization": "High-dimensional Data Analysis, Advanced Analytics"
+    },
+    {
+        "name": "Dr. Mahesh Shetty",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Spatiotemporal Data Studies",
+        "experience": "22 Years",
+        "specialization": "Statistical Modeling, Spatiotemporal Data"
+    },
+    {
+        "name": "Dr. Ramesh Singh",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Spatiotemporal Data Studies",
+        "experience": "27 Years",
+        "specialization": "Spatiotemporal Data, Bayesian Inference, Statistical Modeling"
+    },
+    {
+        "name": "Dr. Ramesh Joshi",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Spatiotemporal Data Studies",
+        "experience": "7 Years",
+        "specialization": "Spatiotemporal Data, Bayesian Inference"
+    },
+    {
+        "name": "Dr. Vijay Nath",
+        "designation": "Professor",
+        "qualification": "M.Tech in Spatiotemporal Data Studies",
+        "experience": "25 Years",
+        "specialization": "Advanced Analytics, High-dimensional Data Analysis"
+    },
+    {
+        "name": "Dr. Swati Iyer",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Spatiotemporal Data Studies",
+        "experience": "7 Years",
+        "specialization": "Bayesian Inference, High-dimensional Data Analysis"
+    },
+    {
+        "name": "Dr. Swati Sharma",
+        "designation": "Professor",
+        "qualification": "M.Tech in Spatiotemporal Data Studies",
+        "experience": "14 Years",
+        "specialization": "Causal Inference, Advanced Analytics, Spatiotemporal Data"
+    },
+    {
+        "name": "Dr. Pooja Joshi",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Spatiotemporal Data Studies",
+        "experience": "8 Years",
+        "specialization": "Bayesian Inference, Statistical Modeling, Advanced Analytics"
+    },
+    {
+        "name": "Dr. Sunil Gupta",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Spatiotemporal Data Studies",
+        "experience": "18 Years",
+        "specialization": "Spatiotemporal Data, Statistical Modeling, Bayesian Inference"
+    },
+    {
+        "name": "Dr. Sanjay Kulkarni",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Spatiotemporal Data Studies",
+        "experience": "27 Years",
+        "specialization": "Spatiotemporal Data, High-dimensional Data Analysis"
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Lakshmi Gupta",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "27 Years",
+        "specialization": "Advanced Robotics, Advanced Manufacturing"
+    },
+    {
+        "name": "Dr. Pooja Patil",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "12 Years",
+        "specialization": "Thermal Engineering, Additive Manufacturing, Composite Materials"
+    },
+    {
+        "name": "Dr. Rajesh Singh",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "19 Years",
+        "specialization": "Composite Materials, Thermal Engineering, Advanced Manufacturing"
+    },
+    {
+        "name": "Dr. Kavita Nath",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "26 Years",
+        "specialization": "Composite Materials, Thermal Engineering"
+    },
+    {
+        "name": "Dr. Swati Patil",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "19 Years",
+        "specialization": "Composite Materials, Computational Fluid Dynamics, Additive Manufacturing"
+    },
+    {
+        "name": "Dr. Kiran Sharma",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "26 Years",
+        "specialization": "Composite Materials, Advanced Manufacturing, Computational Fluid Dynamics"
+    },
+    {
+        "name": "Dr. Sanjay Reddy",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "11 Years",
+        "specialization": "Advanced Manufacturing, Composite Materials"
+    },
+    {
+        "name": "Dr. Ravi Patel",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "23 Years",
+        "specialization": "Advanced Manufacturing, Composite Materials"
+    },
+    {
+        "name": "Dr. Srinivas Nath",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "28 Years",
+        "specialization": "Computational Fluid Dynamics, Advanced Manufacturing, Composite Materials"
+    },
+    {
+        "name": "Dr. Anita Sharma",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Thermal Engineering",
+        "experience": "26 Years",
+        "specialization": "Thermal Engineering, Advanced Robotics, Additive Manufacturing"
+    }
+]

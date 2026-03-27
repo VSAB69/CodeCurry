@@ -29,9 +29,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 // --- DATA ---
 
-type ProgramLevel = 'UG' | 'PG' | 'PhD';
+export type ProgramLevel = 'UG' | 'PG' | 'PhD';
 
-interface Department {
+export interface Department {
   id: string;
   name: string;
   level: ProgramLevel;
@@ -47,7 +47,7 @@ interface Department {
   careers: string[];
 }
 
-const DEPARTMENTS: Department[] = [
+export const DEPARTMENTS: Department[] = [
   // UG - Core
   { id: 'cse', name: 'Computer Science and Engineering', level: 'UG', category: 'Core', icon: Code, description: 'Foundational computing, algorithms, and software development.', color: 'from-blue-500 to-cyan-500', stats: { intake: '240', duration: '4 Years', placement: '98%' }, careers: ['Software Engineer', 'Systems Architect', 'Full Stack Developer'] },
   { id: 'ise', name: 'Information Science and Engineering', level: 'UG', category: 'Core', icon: Database, description: 'Information systems, data management, and network engineering.', color: 'from-indigo-500 to-blue-500', stats: { intake: '180', duration: '4 Years', placement: '96%' }, careers: ['Data Engineer', 'Cloud Architect', 'IT Consultant'] },
@@ -96,11 +96,13 @@ const LABS = [
   { name: "Advanced Materials Lab", desc: "Scanning Electron Microscopes and material testing rigs.", img: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2070&auto=format&fit=crop" }
 ];
 
+import { useNavigate } from 'react-router-dom';
+
 export function Academics() {
   const [activeLevel, setActiveLevel] = useState<ProgramLevel>('UG');
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('All');
-  const [selectedDept, setSelectedDept] = useState<Department | null>(null);
+  const navigate = useNavigate();
   
   const labsRef = useRef<HTMLDivElement>(null);
 
@@ -258,7 +260,7 @@ export function Academics() {
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.9, y: -20 }}
                   transition={{ duration: 0.4, type: "spring" }}
-                  onClick={() => setSelectedDept(dept)}
+                  onClick={() => navigate(`/academics/${dept.id}`)}
                   className="group relative p-8 rounded-3xl bg-white/5 border border-white/10 cursor-pointer overflow-hidden hover:border-white/20 transition-all duration-500"
                   style={{ transformStyle: 'preserve-3d' }}
                   whileHover={{ scale: 1.02, rotateX: 2, rotateY: -2 }}
@@ -378,153 +380,7 @@ export function Academics() {
         </div>
       </section>
 
-      {/* FULLSCREEN MODAL FOR DEPARTMENT DETAILS */}
-      <AnimatePresence>
-        {selectedDept && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6"
-          >
-            {/* Backdrop */}
-            <motion.div 
-              initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
-              animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
-              exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-              className="absolute inset-0 bg-black/60"
-              onClick={() => setSelectedDept(null)}
-            />
-            
-            {/* Modal Content */}
-            <motion.div
-              layoutId={`dept-${selectedDept.id}`}
-              initial={{ scale: 0.9, y: 20, opacity: 0 }}
-              animate={{ scale: 1, y: 0, opacity: 1 }}
-              exit={{ scale: 0.9, y: 20, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="relative w-full max-w-6xl max-h-[90vh] bg-[#0f0f0f] border border-white/10 rounded-[2rem] overflow-hidden flex flex-col shadow-2xl"
-            >
-              {/* Header */}
-              <div className={`p-8 md:p-12 bg-gradient-to-br ${selectedDept.color} relative overflow-hidden shrink-0`}>
-                <div className="absolute inset-0 bg-black/40 mix-blend-overlay" />
-                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
-                
-                <button 
-                  onClick={() => setSelectedDept(null)}
-                  className="absolute top-6 right-6 w-10 h-10 bg-black/20 hover:bg-black/40 rounded-full flex items-center justify-center text-white backdrop-blur-md transition-colors z-20"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-
-                <div className="relative z-10 flex items-start gap-6">
-                  <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/20 shrink-0">
-                    <selectedDept.icon className="w-10 h-10 text-white" />
-                  </div>
-                  <div>
-                    <div className="flex gap-2 mb-3">
-                      <span className="px-3 py-1 rounded-full bg-black/30 text-white text-xs font-bold backdrop-blur-md">
-                        {selectedDept.level}
-                      </span>
-                      <span className="px-3 py-1 rounded-full bg-black/30 text-white text-xs font-bold backdrop-blur-md">
-                        {selectedDept.category}
-                      </span>
-                    </div>
-                    <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
-                      {selectedDept.name}
-                    </h2>
-                    <p className="text-white/80 text-lg max-w-2xl">
-                      {selectedDept.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Scrollable Body */}
-              <div className="p-8 md:p-12 overflow-y-auto custom-scrollbar">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                  
-                  {/* Left Col: Overview & Stats */}
-                  <div className="lg:col-span-2 space-y-12">
-                    <section>
-                      <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                        <BookOpen className="w-6 h-6 text-blue-400" /> Program Overview
-                      </h3>
-                      <p className="text-gray-400 leading-relaxed text-lg">
-                        The {selectedDept.name} program is designed to equip students with deep theoretical knowledge and practical skills. Our curriculum is constantly updated to meet industry standards, ensuring graduates are ready to tackle complex real-world challenges.
-                      </p>
-                    </section>
-
-                    {/* Career Path Visualizer */}
-                    <section>
-                      <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                        <Rocket className="w-6 h-6 text-purple-400" /> Career Paths
-                      </h3>
-                      <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                        <div className="flex flex-col md:flex-row items-center gap-4">
-                          <div className="px-6 py-3 bg-blue-500/20 text-blue-400 font-bold rounded-xl border border-blue-500/30 text-center w-full md:w-auto">
-                            {selectedDept.id.toUpperCase()} Graduate
-                          </div>
-                          <div className="hidden md:block w-12 h-[2px] bg-gradient-to-r from-blue-500/50 to-purple-500/50" />
-                          <div className="flex flex-col gap-3 w-full">
-                            {selectedDept.careers.map((career, idx) => (
-                              <div key={idx} className="flex items-center gap-4">
-                                <div className="hidden md:block w-8 h-[2px] bg-purple-500/30" />
-                                <div className="px-6 py-3 bg-white/5 text-gray-300 rounded-xl border border-white/10 w-full hover:bg-white/10 transition-colors">
-                                  {career}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-
-                  {/* Right Col: Quick Stats & Placements */}
-                  <div className="space-y-8">
-                    <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                      <h4 className="text-lg font-bold text-white mb-6">Program Stats</h4>
-                      <div className="space-y-6">
-                        <div>
-                          <div className="text-sm text-gray-500 mb-1">Duration</div>
-                          <div className="text-xl font-bold text-white">{selectedDept.stats.duration}</div>
-                        </div>
-                        <div>
-                          <div className="text-sm text-gray-500 mb-1">Annual Intake</div>
-                          <div className="text-xl font-bold text-white">{selectedDept.stats.intake}</div>
-                        </div>
-                        <div>
-                          <div className="text-sm text-gray-500 mb-1">Placement Rate</div>
-                          <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">
-                            {selectedDept.stats.placement}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/20 rounded-2xl p-6">
-                      <h4 className="text-lg font-bold text-white mb-4">Top Recruiters</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {['Google', 'Microsoft', 'Amazon', 'TCS', 'Infosys', 'Wipro', 'Intel', 'IBM'].sort(() => 0.5 - Math.random()).slice(0, 5).map(company => (
-                          <span key={company} className="px-3 py-1 bg-white/10 rounded-lg text-sm text-gray-300">
-                            {company}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    <button className="w-full py-4 bg-white text-black font-bold rounded-xl hover:bg-gray-200 transition-colors">
-                      View Full Syllabus
-                    </button>
-                  </div>
-
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* FULLSCREEN MODAL FOR DEPARTMENT DETAILS REMOVED IN FAVOR OF NAVIGATION */}
 
       <style>{`
         .custom-scrollbar::-webkit-scrollbar {

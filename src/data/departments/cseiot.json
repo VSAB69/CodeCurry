@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Prakash Kulkarni",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Cyber Security Studies",
+        "experience": "26 Years",
+        "specialization": "Edge Computing, IoT Architecture"
+    },
+    {
+        "name": "Dr. Priya Patel",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Cyber Security Studies",
+        "experience": "20 Years",
+        "specialization": "Edge Computing, Wireless Sensor Networks"
+    },
+    {
+        "name": "Dr. Ramesh Sharma",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Cyber Security Studies",
+        "experience": "18 Years",
+        "specialization": "Wireless Sensor Networks, IoT Architecture, Embedded Systems"
+    },
+    {
+        "name": "Dr. Deepak Hegde",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Cyber Security Studies",
+        "experience": "16 Years",
+        "specialization": "IoT Architecture, Cyber Security"
+    },
+    {
+        "name": "Dr. Arvind Nath",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Cyber Security Studies",
+        "experience": "18 Years",
+        "specialization": "Edge Computing, IoT Architecture"
+    },
+    {
+        "name": "Dr. Deepak Sharma",
+        "designation": "Professor",
+        "qualification": "M.Tech in Cyber Security Studies",
+        "experience": "9 Years",
+        "specialization": "Edge Computing, IoT Architecture"
+    },
+    {
+        "name": "Dr. Swati Joshi",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Cyber Security Studies",
+        "experience": "30 Years",
+        "specialization": "Cyber Security, Cryptography, Edge Computing"
+    },
+    {
+        "name": "Dr. Kiran Hegde",
+        "designation": "Professor",
+        "qualification": "M.Tech in Cyber Security Studies",
+        "experience": "22 Years",
+        "specialization": "Cyber Security, Cryptography, IoT Architecture"
+    },
+    {
+        "name": "Dr. Anita Nath",
+        "designation": "Professor",
+        "qualification": "M.Tech in Cyber Security Studies",
+        "experience": "27 Years",
+        "specialization": "Cyber Security, Wireless Sensor Networks, IoT Architecture"
+    },
+    {
+        "name": "Dr. Mahesh Nath",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Cyber Security Studies",
+        "experience": "21 Years",
+        "specialization": "Cyber Security, Wireless Sensor Networks, Cryptography"
+    }
+]

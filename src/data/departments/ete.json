@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Sunil Joshi",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Telecommunication Networks Studies",
+        "experience": "24 Years",
+        "specialization": "Optical Communication, Wireless Communication"
+    },
+    {
+        "name": "Dr. Amit Patil",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Telecommunication Networks Studies",
+        "experience": "29 Years",
+        "specialization": "Signal Processing, Wireless Communication"
+    },
+    {
+        "name": "Dr. Lakshmi Verma",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Telecommunication Networks Studies",
+        "experience": "23 Years",
+        "specialization": "Signal Processing, Telecommunication Networks, Microwave Engineering"
+    },
+    {
+        "name": "Dr. Anita Kulkarni",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Telecommunication Networks Studies",
+        "experience": "19 Years",
+        "specialization": "Wireless Communication, Optical Communication, Antenna Design"
+    },
+    {
+        "name": "Dr. Swati Rao",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Telecommunication Networks Studies",
+        "experience": "10 Years",
+        "specialization": "Microwave Engineering, Signal Processing, Optical Communication"
+    },
+    {
+        "name": "Dr. Rahul Reddy",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Telecommunication Networks Studies",
+        "experience": "10 Years",
+        "specialization": "Signal Processing, Telecommunication Networks, Antenna Design"
+    },
+    {
+        "name": "Dr. Pooja Joshi",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Telecommunication Networks Studies",
+        "experience": "11 Years",
+        "specialization": "Signal Processing, Antenna Design"
+    },
+    {
+        "name": "Dr. Vijay Desai",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Telecommunication Networks Studies",
+        "experience": "10 Years",
+        "specialization": "Antenna Design, Telecommunication Networks"
+    },
+    {
+        "name": "Dr. Pooja Gupta",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Telecommunication Networks Studies",
+        "experience": "10 Years",
+        "specialization": "Signal Processing, Telecommunication Networks"
+    },
+    {
+        "name": "Dr. Prakash Sharma",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Telecommunication Networks Studies",
+        "experience": "9 Years",
+        "specialization": "Telecommunication Networks, Optical Communication, Signal Processing"
+    }
+]

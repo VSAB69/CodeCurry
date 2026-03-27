@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Dr. Neha Sharma",
+        "designation": "Professor & Head of Department",
+        "qualification": "Ph.D. in Biomechanics Studies",
+        "experience": "15 Years",
+        "specialization": "Medical Imaging, Biomedical Instrumentation"
+    },
+    {
+        "name": "Dr. Ravi Shetty",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Biomechanics Studies",
+        "experience": "8 Years",
+        "specialization": "Biomedical Instrumentation, Medical Imaging, Biomechanics"
+    },
+    {
+        "name": "Dr. Deepak Patel",
+        "designation": "Associate Professor",
+        "qualification": "Ph.D. in Biomechanics Studies",
+        "experience": "14 Years",
+        "specialization": "Healthcare Informatics, Medical Imaging"
+    },
+    {
+        "name": "Dr. Rajesh Verma",
+        "designation": "Professor",
+        "qualification": "M.Tech in Biomechanics Studies",
+        "experience": "11 Years",
+        "specialization": "Biomedical Instrumentation, Biomechanics"
+    },
+    {
+        "name": "Dr. Anita Patil",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Biomechanics Studies",
+        "experience": "10 Years",
+        "specialization": "Biomechanics, Biosensors"
+    },
+    {
+        "name": "Dr. Swati Desai",
+        "designation": "Associate Professor",
+        "qualification": "M.Tech in Biomechanics Studies",
+        "experience": "18 Years",
+        "specialization": "Biosensors, Medical Imaging, Biomechanics"
+    },
+    {
+        "name": "Dr. Ravi Kulkarni",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Biomechanics Studies",
+        "experience": "26 Years",
+        "specialization": "Healthcare Informatics, Biosensors, Biomedical Instrumentation"
+    },
+    {
+        "name": "Dr. Rajesh Rao",
+        "designation": "Assistant Professor",
+        "qualification": "M.Tech in Biomechanics Studies",
+        "experience": "13 Years",
+        "specialization": "Medical Imaging, Biosensors, Signal Processing in Healthcare"
+    },
+    {
+        "name": "Dr. Deepak Nair",
+        "designation": "Professor",
+        "qualification": "Ph.D. in Biomechanics Studies",
+        "experience": "30 Years",
+        "specialization": "Signal Processing in Healthcare, Biomedical Instrumentation, Medical Imaging"
+    },
+    {
+        "name": "Dr. Pooja Shetty",
+        "designation": "Assistant Professor",
+        "qualification": "Ph.D. in Biomechanics Studies",
+        "experience": "17 Years",
+        "specialization": "Biomechanics, Medical Imaging"
+    }
+]
