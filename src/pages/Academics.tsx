@@ -316,7 +316,7 @@ export function Academics() {
         <div className="pl-6 lg:pl-8">
           <div className="labs-container flex gap-8 w-max pb-10">
             {LABS.map((lab, i) => (
-              <div key={i} className="w-[400px] md:w-[600px] h-[400px] relative rounded-3xl overflow-hidden group shrink-0">
+              <div key={i} className="w-[85vw] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] relative rounded-3xl overflow-hidden group shrink-0">
                 <img src={lab.img} alt={lab.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" referrerPolicy="no-referrer" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8">

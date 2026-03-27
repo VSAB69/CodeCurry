@@ -520,7 +520,7 @@ export function Alumni() {
           <div className="flex w-[300%] md:w-max">
             <motion.div animate={{ x: ["0%", "-50%"] }} transition={{ repeat: Infinity, ease: "linear", duration: 40 }} className="flex gap-8 px-4">
               {[...QUOTES, ...QUOTES].map((quote, i) => (
-                <div key={i} className="w-[350px] md:w-[500px] shrink-0">
+                <div key={i} className="w-[85vw] sm:w-[350px] md:w-[500px] shrink-0">
                   <GlassCard className="p-8 border-blue-500/20">
                     <Quote className="w-8 h-8 text-blue-500 mb-6 opacity-50" />
                     <p className="text-lg md:text-xl font-medium text-gray-200 leading-relaxed">"{quote}"</p>
