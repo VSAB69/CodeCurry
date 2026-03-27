@@ -18,6 +18,7 @@ const STATS = [
 
 const MAP_NODES = [
   { top: '55%', left: '72%', label: "Bangalore", count: "20,000+", isHub: true },
+  { top: '50%', left: '71%', label: "India", count: "50,000+", isHub: true },
   { top: '48%', left: '71%', label: "Delhi", count: "5,000+", isHub: true },
   { top: '53%', left: '69%', label: "Mumbai", count: "4,500+", isHub: true },
   { top: '54%', left: '71%', label: "Hyderabad", count: "3,000+" },
@@ -99,7 +100,7 @@ const FEATURED_ALUMNI = [
   },
   {
     id: 6, name: "Dr. Ananya Sharma", role: "Head of AI Research", company: "DeepMind", tag: "AI / Research Expert",
-    img: "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?auto=format&fit=crop&q=80&w=600&h=600",
+    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600&h=600",
     story: "Leading breakthrough research in AGI and reinforcement learning, pushing the boundaries of what machines can learn.",
     journey: [
       { year: "2012", text: "Graduated from BMSCE (CSE)" },
